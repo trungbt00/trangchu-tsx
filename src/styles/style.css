@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #1E1E1E;
+  background: #fff;
+}
+
+
+/* Tiêu đề chính */
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin: 20px;
+  line-height: 1.4;
+}
+
+h2, h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 16px 0px;
+  line-height: 1.4;
+  text-align: justify;
+  hyphens: auto;
+  word-break: break-word;
+}
+
+
+/* Title đặc biệt (ví dụ như tiêu đề trang lớn) */
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: #1E1E1E;
+  line-height: 1.8;
+}
+
+
+/* Container chung */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0px 20px;
+}
+
+
+
+/* BANNER */
+.banner-wrapper {
+  background-image: "image/MAN08824.jpg";
+  background-size: cover;
+  background-position: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+/* BANNER Responsive */
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+/* Điều chỉnh banner trên màn hình nhỏ */
+@media (max-width: 768px) {
+  .banner-img {
+    height: auto;
+  }
+}
+
+
+/* Kích thước chuẩn cho banner */
+.banner {
+  width: 100%;
+  max-width: 1920px;
+  height: 680px;
+  margin: 0 auto;
+}
+
+.banner-img {
+  width: 1920px;
+  height: 680px;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Căn giữa các phần */
+section {
+  text-align: center;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.field-grid,
+.logo-grid,
+.news-grid,
+.partner-logos {
+  justify-content: center;
+}
+
+.partner-logos {
+  justify-content: flex-start;
+}
+
+

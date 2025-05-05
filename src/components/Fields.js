@@ -2,12 +2,10 @@ import React from "react";
 import systemIntegrationImg from "../assets/images/TÍCH HỢP HỆ THỐNG.jpg";
 import cloudComputingImg from "../assets/images/TRUNG TÂM DỮ LIỆU VÀ ĐIỆN TOÁN ĐÁM MÂY.jpg";
 import informationSecurityImg from "../assets/images/ATTT.jpg";
-
 import icon1 from "../assets/images/Vector/Vector 1.png";
 import icon2 from "../assets/images/Vector/Vector 2.png";
 import icon3 from "../assets/images/Vector/Vector 3.png";
-
-import "../styles/Lĩnh vực hoạt động.css"; // nếu có CSS riêng
+import "../styles/Lĩnh vực hoạt động.css";
 
 export default function Fields() {
   return (

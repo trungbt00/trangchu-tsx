@@ -1,35 +1,54 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import logo from "../assets/images/FINALE GTSC-05.png";
+import React, { useEffect, useState } from "react";
 import "../styles/header.css";
+import logo from "../assets/images/FINALE GTSC-05.png";
 
 export default function Header() {
+  const [isSticky, setSticky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <header className="header">
+    <header className={`header ${isSticky ? "sticky-header" : ""}`}>
       <div className="container">
-        <ul className="nav">
+        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          &#9776;
+        </div>
+        <ul className={`nav ${menuOpen ? "active" : ""}`} id="nav-menu">
           <li className="logo-item">
-            <Link to="/">
+            <a href="#" className="active" onClick={scrollToTop}>
               <img src={logo} alt="GTSC logo" className="logo" />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/">Trang chủ</Link>
+            <a href="/">Trang chủ</a>
           </li>
           <li>
-            <Link to="/gioi-thieu">Giới thiệu</Link>
+            <a href="/gioi-thieu">Giới thiệu</a>
           </li>
           <li>
-            <Link to="/san-pham">Sản phẩm</Link>
+            <a href="/san-pham">Sản phẩm</a>
           </li>
           <li>
-            <Link to="/tin-tuc">Tin tức</Link>
+            <a href="/tin-tuc">Tin tức</a>
           </li>
           <li>
-            <Link to="/tuyen-dung">Tuyển dụng</Link>
+            <a href="/tuyen-dung">Tuyển dụng</a>
           </li>
           <li>
-            <Link to="/lien-he">Liên hệ</Link>
+            <a href="/lien-he">Liên hệ</a>
           </li>
         </ul>
       </div>

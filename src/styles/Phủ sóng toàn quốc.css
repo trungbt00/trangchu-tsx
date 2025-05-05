@@ -9,27 +9,21 @@
 }
 
 .nationwide .grid {
-  align-items: center;
-  color: rgb(30, 30, 30);
-  column-gap: 40px;
   display: flex;
   flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
   font-family: Inter, sans-serif;
   font-size: 18px;
-  height: auto 419.312px;
-  margin-bottom: 0px;
-  margin-left: 154px;
-  margin-right: 154px;
-  margin-top: 0px;
-  max-width: 1200px;
-  padding-bottom: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 40px;
-  row-gap: 40px;
+  color: rgb(30, 30, 30);
   text-align: center;
-  unicode-bidi: isolate;
-  width: auto 1200px;
 }
 
 .nationwide h1 {

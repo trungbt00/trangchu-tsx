@@ -1,25 +1,24 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: #1E1E1E;
+  font-family: "Inter", sans-serif;
+  color: #1e1e1e;
   background: #fff;
 }
 
-
 /* Tiêu đề chính */
 h1 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 48px;
   margin: 20px;
   line-height: 1.4;
 }
 
-h2, h3 {
-  font-family: 'Inter', sans-serif;
+h2,
+h3 {
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 24px;
   margin: 16px 0px;
@@ -29,16 +28,14 @@ h2, h3 {
   word-break: break-word;
 }
 
-
 /* Title đặc biệt (ví dụ như tiêu đề trang lớn) */
 .title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 48px;
-  color: #1E1E1E;
+  color: #1e1e1e;
   line-height: 1.8;
 }
-
 
 /* Container chung */
 .container {
@@ -47,11 +44,10 @@ h2, h3 {
   padding: 40px 20px;
 }
 
-
 /* Base styles */
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
 }
 
@@ -60,8 +56,6 @@ body {
   margin: auto;
   padding: 0px 20px;
 }
-
-
 
 /* BANNER */
 .banner-wrapper {
@@ -72,7 +66,6 @@ body {
   margin-bottom: 0;
 }
 
-
 /* BANNER Responsive */
 .banner-img {
   width: 100%;
@@ -81,14 +74,12 @@ body {
   object-fit: cover;
 }
 
-
 /* Điều chỉnh banner trên màn hình nhỏ */
 @media (max-width: 768px) {
   .banner-img {
     height: auto;
   }
 }
-
 
 /* Kích thước chuẩn cho banner */
 .banner {
@@ -104,7 +95,6 @@ body {
   object-fit: cover;
   display: block;
 }
-
 
 /* Căn giữa các phần */
 section {
@@ -126,5 +116,3 @@ section {
 .partner-logos {
   justify-content: flex-start;
 }
-
-

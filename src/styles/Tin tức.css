@@ -27,7 +27,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin-top: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 .news h1 {
@@ -108,4 +108,49 @@
   color: #333;
   margin-top: -2px;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  div.container {
+    padding: 40px 20px;
+  }
+
+  .news h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  div.news-card.visible {
+    padding: 10px;
+  }
+
+  div.news-grid {
+    margin: 0px 20px;
+  }
+
+  .news-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 12px 0 8px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .news-card p {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 0 12px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

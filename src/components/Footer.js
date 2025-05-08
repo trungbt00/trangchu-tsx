@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "../styles/footer.css";
 import logo from "../assets/images/FINALE GTSC-05.png";
+import { useTranslation } from "react-i18next";
+import "../styles/style.css";
 
 export default function Footer() {
   useEffect(() => {
@@ -20,6 +22,8 @@ export default function Footer() {
     return () => faders.forEach((el) => observer.unobserve(el));
   }, []);
 
+  const { i18n } = useTranslation();
+
   return (
     <footer className="footer fade-in-on-scroll">
       <div className="container footer-container">
@@ -29,34 +33,33 @@ export default function Footer() {
 
         <div className="footer-col">
           <p>
-            <strong>Trụ sở chính:</strong>
+            <strong>{i18n.t("head-office")}:</strong>
             <br />
-            103-105 Nguyễn Tuân, Phường Thanh Xuân Trung, Quận Thanh Xuân, Hà
-            Nội.
+            {i18n.t("Head-address")}
           </p>
           <p>
-            <strong>VP đại diện miền Trung:</strong>
+            <strong>{i18n.t("Central-office")}:</strong>
             <br />
-            107 Lê Lợi, Quận Hải Châu, Tp. Đà Nẵng.
+            {i18n.t("Central-address")}
           </p>
           <p>
-            <strong>VP đại diện miền Nam:</strong>
+            <strong>{i18n.t("South-office")}:</strong>
             <br />
-            385C Nguyễn Trãi, Quận 1, Tp. Hồ Chí Minh.
+            {i18n.t("South-address")}
           </p>
         </div>
 
         <div className="footer-col">
-          <h4>Kết nối nhanh</h4>
+          <h4>{i18n.t("connect")}</h4>
           <ul>
             <li>
-              <a href="#">Trang chủ</a>
+              <a href="#">{i18n.t("home")}</a>
             </li>
             <li>
-              <a href="#">Giới thiệu</a>
+              <a href="#">{i18n.t("about")}</a>
             </li>
             <li>
-              <a href="#">Dịch vụ</a>
+              <a href="#">{i18n.t("contact")}</a>
             </li>
           </ul>
         </div>

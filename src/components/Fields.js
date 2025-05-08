@@ -6,12 +6,16 @@ import icon1 from "../assets/images/Vector/Vector 1.png";
 import icon2 from "../assets/images/Vector/Vector 2.png";
 import icon3 from "../assets/images/Vector/Vector 3.png";
 import "../styles/Lĩnh vực hoạt động.css";
+import { useTranslation } from "react-i18next";
+import "../styles/style.css";
 
 export default function Fields() {
+  const { i18n } = useTranslation();
+
   return (
     <section className="fields">
       <div className="container">
-        <h1 className="heading">LĨNH VỰC HOẠT ĐỘNG</h1>
+        <h1 className="heading">{i18n.t("field")}</h1>
         <div className="field-grid">
           <div className="field-item">
             <img
@@ -21,7 +25,7 @@ export default function Fields() {
             />
             <div className="field-caption">
               <img src={icon1} alt="Icon 1" loading="lazy" />
-              <p>TÍCH HỢP HỆ THỐNG</p>
+              <p>{i18n.t("system-integration")}</p>
             </div>
           </div>
 
@@ -33,11 +37,7 @@ export default function Fields() {
             />
             <div className="field-caption">
               <img src={icon2} alt="Icon 2" loading="lazy" />
-              <p>
-                TRUNG TÂM DỮ LIỆU VÀ
-                <br />
-                ĐIỆN TOÁN ĐÁM MÂY
-              </p>
+              <p>{i18n.t("data-center")}</p>
             </div>
           </div>
 
@@ -49,7 +49,7 @@ export default function Fields() {
             />
             <div className="field-caption">
               <img src={icon3} alt="Icon 3" loading="lazy" />
-              <p>AN TOÀN THÔNG TIN</p>
+              <p>{i18n.t("info-assurance")}</p>
             </div>
           </div>
         </div>

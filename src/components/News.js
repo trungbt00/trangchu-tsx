@@ -4,9 +4,12 @@ import "../styles/Tin tức.css";
 import image1 from "../assets/images/Tin tức/Image 1.png";
 import image2 from "../assets/images/Tin tức/Image 2.png";
 import image3 from "../assets/images/Tin tức/Image 3.png";
+import { useTranslation } from "react-i18next";
+import "../styles/style.css";
 
 export default function News() {
   const cardsRef = useRef([]);
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,7 +59,7 @@ export default function News() {
   return (
     <section className="news">
       <div className="container">
-        <h1 className="heading">TIN TỨC</h1>
+        <h1 className="heading">{i18n.t("NEWS")}</h1>
         <div className="news-grid">
           {newsItems.map((item, index) => (
             <div

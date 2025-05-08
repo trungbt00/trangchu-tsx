@@ -1,54 +1,82 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/header.css";
 import logo from "../assets/images/FINALE GTSC-05.png";
+import "../styles/style.css";
 
 export default function Header() {
-  const [isSticky, setSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { i18n } = useTranslation();
+  const topBarRef = useRef(null);
+  const navRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setSticky(window.scrollY > 100);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const changeLanguage = () => {
+    const newLang = i18n.language === "vi" ? "en" : "vi";
+    i18n.changeLanguage(newLang);
+  };
 
   const scrollToTop = (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+
+    if (menuOpen && topBarRef.current && navRef.current && isMobile) {
+      const height = topBarRef.current.offsetHeight;
+      navRef.current.style.marginTop = `${height}px`;
+    } else if (navRef.current) {
+      navRef.current.style.marginTop = "";
+      navRef.current.style.display = "";
+    }
+  }, [menuOpen]);
+
   return (
-    <header className={`header ${isSticky ? "sticky-header" : ""}`}>
-      <div className="container">
-        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          &#9776;
+    <header className="header">
+      <div className="nav-container">
+        <div className="top-bar" ref={topBarRef}>
+          <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+          </div>
+          <div className="logo-center" onClick={scrollToTop}>
+            <img src={logo} alt="GTSC logo" className="logo" />
+          </div>
+          <div>
+            <button onClick={changeLanguage} className="button lang-btn">
+              🌐 {i18n.language.toUpperCase()}
+            </button>
+          </div>
         </div>
-        <ul className={`nav ${menuOpen ? "active" : ""}`} id="nav-menu">
-          <li className="logo-item">
-            <a href="#" className="active" onClick={scrollToTop}>
+
+        <ul className={`nav ${menuOpen ? "active" : ""}`} ref={navRef}>
+          <li className="logo-item-desktop">
+            <div onClick={scrollToTop}>
               <img src={logo} alt="GTSC logo" className="logo" />
-            </a>
+            </div>
           </li>
           <li>
-            <a href="/">Trang chủ</a>
+            <a href="/">{i18n.t("home")}</a>
           </li>
           <li>
-            <a href="/gioi-thieu">Giới thiệu</a>
+            <a href="/">{i18n.t("about")}</a>
           </li>
           <li>
-            <a href="/san-pham">Sản phẩm</a>
+            <a href="/">{i18n.t("products")}</a>
           </li>
           <li>
-            <a href="/tin-tuc">Tin tức</a>
+            <a href="/">{i18n.t("news")}</a>
           </li>
           <li>
-            <a href="/tuyen-dung">Tuyển dụng</a>
+            <a href="/">{i18n.t("careers")}</a>
           </li>
           <li>
-            <a href="/lien-he">Liên hệ</a>
+            <a href="/">{i18n.t("contact")}</a>
+          </li>
+          <li className="lang-btn-wrapper">
+            <button onClick={changeLanguage} className="button lang-btn">
+              🌐 {i18n.language.toUpperCase()}
+            </button>
           </li>
         </ul>
       </div>

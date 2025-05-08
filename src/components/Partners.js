@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/Đối tác.css";
-
+import { useTranslation } from "react-i18next";
 import logo1 from "../assets/Khách hàng logo/Logo Bộ Công An.png";
 import logo2 from "../assets/Khách hàng logo/Logo_QĐNDVN.png";
 import logo3 from "../assets/Khách hàng logo/Logo chính phủ.png";
@@ -16,10 +16,11 @@ import logo12 from "../assets/Khách hàng logo/EVN.png";
 import logo13 from "../assets/Khách hàng logo/logo-bo-nong-nghiep-inkythuatso-01.png";
 import logo14 from "../assets/Khách hàng logo/Logo Bộ Tài Nguyên và Môi Trường Stamp.png";
 import logo15 from "../assets/Khách hàng logo/Logo ACV.png";
+import "../styles/style.css";
 
 const Partners = () => {
   const partnerRef = useRef(null);
-
+  const { t } = useTranslation();
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -61,7 +62,7 @@ const Partners = () => {
   return (
     <section className="partners fade-in-on-scroll" ref={partnerRef}>
       <div className="container">
-        <h1 className="heading">ĐỐI TÁC</h1>
+        <h1 className="heading">{t("partners")}</h1>
         <div className="partner-slide-wrapper">
           <div className="partner-slide-track">
             {logos.map((logo, index) => (

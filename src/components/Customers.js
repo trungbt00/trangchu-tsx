@@ -15,8 +15,12 @@ import logo12 from "../assets/Khách hàng logo/EVN.png";
 import logo13 from "../assets/Khách hàng logo/logo-bo-nong-nghiep-inkythuatso-01.png";
 import logo14 from "../assets/Khách hàng logo/Logo Bộ Tài Nguyên và Môi Trường Stamp.png";
 import logo15 from "../assets/Khách hàng logo/Logo ACV.png";
+import { useTranslation } from "react-i18next";
+import "../styles/style.css";
+
 export default function Customers() {
   const logosRef = useRef([]);
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -75,24 +79,10 @@ export default function Customers() {
     <section className="customers fade-in-on-scroll">
       <div className="container customers-container">
         <div className="customers-text">
-          <h1>KHÁCH HÀNG</h1>
-          <p>
-            Chúng tôi luôn đặt khách hàng làm trung tâm trong mọi hoạt động. Với
-            cam kết mang đến sản phẩm và dịch vụ chất lượng cao, chúng tôi không
-            ngừng lắng nghe, thấu hiểu và đáp ứng nhu cầu của khách hàng một
-            cách tốt nhất.
-          </p>
-          <p>
-            Dù bạn là cá nhân hay doanh nghiệp, chúng tôi luôn sẵn sàng hỗ trợ
-            với các giải pháp tối ưu, giúp bạn trải nghiệm dịch vụ chuyên nghiệp
-            và tận tâm. Đội ngũ chăm sóc khách hàng của chúng tôi luôn sẵn sàng
-            24/7 để giải đáp mọi thắc mắc, mang đến sự hài lòng cao nhất.
-          </p>
-          <p>
-            Hãy cùng chúng tôi xây dựng một mối quan hệ bền vững, nơi bạn không
-            chỉ là khách hàng mà còn là người bạn đồng hành trong hành trình
-            phát triển!
-          </p>
+          <h1>{i18n.t("customers")}</h1>
+          <p>{i18n.t("customers-script1")}</p>
+          <p>{i18n.t("customers-script2")}</p>
+          <p>{i18n.t("customers-script3")}</p>
         </div>
 
         <div className="customers-logos">

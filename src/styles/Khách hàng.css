@@ -23,6 +23,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 47px;
   font-weight: 700;
+  margin-top: 20px;
   margin-bottom: 24px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   animation: fadeInUp 1s ease forwards;
@@ -55,6 +56,8 @@ body {
   gap: 40px;
   justify-items: center;
   align-items: center;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .customers-logos img {
@@ -87,8 +90,46 @@ body {
   .customers-container {
     flex-direction: column;
   }
+
   .customers-text,
   .customers-logos {
     flex: 1 1 100%;
+  }
+
+  .customers-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .customers-logos img {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.customers.fade-in-on-scroll.visible {
+    padding: 40px 20px;
+  }
+
+  .customers h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0px 0px 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .customers-text p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    text-align: left;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
   }
 }

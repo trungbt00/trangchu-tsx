@@ -1,0 +1,80 @@
+.red-box {
+  width: 440px;
+  height: 70px;
+  background-color: rgb(171, 45, 46);
+  border-radius: 10px;
+}
+
+.text-h2 {
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  line-height: 1.4;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.section1-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 24px;
+  justify-content: center;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.section-item2 {
+  width: 100%;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 48px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section-item2 img {
+  height: 200px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.pt-3.fw-bold {
+  padding: 0% !important;
+}
+
+.text-p {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .red-box {
+    width: 80vw;
+    height: auto;
+    padding: 12px 0;
+  }
+
+  h2.text-h2 {
+    font-size: 24px;
+  }
+
+  .section-item2 {
+    padding: 16px 24px; /* giảm padding */
+    width: 100%; /* chiếm toàn bộ chiều ngang */
+    box-sizing: border-box; /* đảm bảo padding không làm tràn */
+  }
+
+  .section-item2 img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .text-p {
+    font-size: 14px;
+  }
+}

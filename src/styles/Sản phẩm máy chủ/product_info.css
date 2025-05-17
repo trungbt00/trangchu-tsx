@@ -1,0 +1,151 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 24px;
+}
+
+.section-item {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+}
+
+.product-item {
+  max-width: 50%;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 2px solid #c92135;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+}
+
+.product-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-bottom: 24px;
+}
+
+.aaa {
+  border: 2px solid #c92135;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+}
+
+.section-item-img {
+  min-height: 300px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.product-item-img {
+  min-height: 300px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+div.pt-3.fw-bold {
+  font-size: 16px;
+  color: rgb(45, 143, 204);
+  text-align: center;
+}
+
+img.sp-mod {
+  height: 26px;
+  width: auto;
+  margin-top: -8px;
+  object-fit: contain;
+  border-radius: 0%;
+}
+
+.info-box1 {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 0 2px #c92135 inset;
+  padding: 16px;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000;
+}
+
+.info-box2 {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 0 2px #0b5eb3 inset;
+  padding: 16px;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000;
+}
+
+h5.fw-bold {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-size: 16px !important;
+}
+
+.h2.fw-bold {
+  margin-top: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  font-size: 32px;
+}
+
+.info-box ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.info-box li {
+  margin-bottom: 4px;
+}
+
+.info-box p {
+  margin-bottom: 12px;
+}
+
+.info-box hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 12px 0;
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-box1,
+  .info-box2 {
+    margin: 20px;
+  }
+
+  div.aaa {
+    margin: 20px;
+  }
+}

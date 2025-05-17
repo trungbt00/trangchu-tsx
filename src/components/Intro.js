@@ -34,10 +34,7 @@ export default function Intro() {
   }, []);
 
   return (
-    <section
-      ref={introRef}
-      className={`intro fade-in-on-scroll ${isVisible ? "visible" : ""}`}
-    >
+    <section ref={introRef} className={`intro ${isVisible ? "visible" : ""}`}>
       <div className="intro-container">
         <h1>{i18n.t("company-name")}</h1>
         <p>{i18n.t("intro")}</p>

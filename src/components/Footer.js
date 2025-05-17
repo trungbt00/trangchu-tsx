@@ -53,14 +53,17 @@ export default function Footer() {
           <h4>{i18n.t("connect")}</h4>
           <ul>
             <li>
-              <a href="#">{i18n.t("home")}</a>
+              <a href="/">{i18n.t("home")}</a>
             </li>
+            <br></br>
             <li>
-              <a href="#">{i18n.t("about")}</a>
+              <a href="/gioi-thieu">{i18n.t("about")}</a>
             </li>
+            <br></br>
             <li>
-              <a href="#">{i18n.t("contact")}</a>
+              <a href="/">{i18n.t("contact")}</a>
             </li>
+            <br></br>
           </ul>
         </div>
 

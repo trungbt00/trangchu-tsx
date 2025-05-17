@@ -1,0 +1,41 @@
+[
+  {
+    "id":"1",
+    "title":"NHÂN VIÊN KIỂM THỬ PHẦN MỀM",
+    "address":"Số 103 Nguyễn Tuân, Thanh Xuân, Hà Nội",
+    "deadline":"31/05/2023",
+    "salary":">25 triệu/tháng",
+    "number":"2",
+    "description": "<p>Có thể đọc tài liệu thiết kế của nhóm thiết kế và tài liệu nghiệp vụ để viết test case, lập kế hoạch kiểm thử, thực hiện kiểm thử</p>\n<p>Giao tiếp với đội BackEnd và FrontEnd trong quá trình phát hiện lỗi, kiểm tra sau khi sửa lỗi.</p>\n<p>Xây dựng tài liệu hướng dẫn sử dụng; đào tạo người dùng cuối.</p>\n<p>Trao đổi, thảo luận, phối hợp với các thành viên trong team để hoàn thành dự án.</p>\n<p>Quản lý và kiểm tra chất lượng sản phẩm.</p>\n<p>Thực các công việc trên jira.</p>",
+    "requirements": "<p>Trình độ học vấn:</p>\n<p>&nbsp;&nbsp;- Tốt nghiệp đại học, cao đẳng (ưu tiên chuyên ngành Công nghệ thông tin)</p>\n<p>Kiến thức/kinh nghiệm:</p>\n<p>&nbsp;&nbsp;- Có kinh nghiệm từ 03 năm trở lên.</p>\n<p>Khả năng khác</p>\n<p>&nbsp;&nbsp;- Có tinh thần trách nhiệm cao trong công việc.</p>\n<p>&nbsp;&nbsp;- Có tinh thần học hỏi, năng động, làm việc nhóm hoặc độc lập.</p>\n<p>&nbsp;&nbsp;- Ứng viên nắm rõ quy trình phát triển và kiểm thử phần mềm</p>\n<p>&nbsp;&nbsp;- Có từ 03 năm kinh nghiệm vị trí Tester.</p>\n<p>&nbsp;&nbsp;- Có kinh nghiệm làm việc trong các dự án product và mô hình Agile Scrum.</p>\n<p>&nbsp;&nbsp;- Có kinh nghiệm làm việc trên các các công cụ test API như Postman và biết truy vấn cơ sở dữ liệu.</p>\n<p>&nbsp;&nbsp;- Có kinh nghiệm test tải như Jmeter là một lợi thế.</p>\n<p>Giới tính, độ tuổi:</p>\n<p>&nbsp;&nbsp;- Không giới hạn</p>",
+    "benefits": "<p>Mức lương:</p>\n<p>&nbsp;&nbsp;- Đến hơn 20 triệu</p>\n<p>&nbsp;&nbsp;- Thưởng lương tháng 13 , thưởng lễ tết theo quy định và kết quả kinh doanh của Công ty.</p>\n<p>Thời gian làm việc:</p>\n<p>&nbsp;&nbsp;- Từ thứ hai đến hết sáng thứ bảy (Nghỉ chiều thứ bảy và chủ nhật)</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;+ Sáng : từ 08h00 đến 12h00</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;+ Chiều : Từ 13h00 đến 17h00</p>\n<p>&nbsp;&nbsp;- Nghỉ các ngày Lễ, Tết theo quy định của pháp luật</p>\n<p>Chế độ:</p>\n<p>&nbsp;&nbsp;- BHXH,BHYT,BHTN theo quy định của pháp luật</p>\n<p>&nbsp;&nbsp;- Bảo hiểm tai nạn và sức khỏe PTI</p>\n<p>&nbsp;&nbsp;- Du lịch/ Teambuilding 01 lần/năm</p>",
+    "img":"https://img.gtsc.vn/files/upload/news/tuyen-dung-nhan-vien-kiem-thu-phan-mem-20240923154443.jpg?id=c8fc9e20-111b-4344-974a-d7a186730242",
+    "exp":"> 3 năm kinh nghiệm"
+  },
+  {
+    "id":"2",
+    "title":"CHUYÊN VIÊN PHÂN TÍCH NGHIỆP VỤ (BA)",
+    "address":"Số 103 Nguyễn Tuân, Thanh Xuân, Hà Nội",
+    "deadline":"31/05/2023",
+    "salary":"20-30 triệu/tháng",
+    "number":"2",
+    "description": "<p>Xác định và phân tích các quy trình thực hiện hiện tại và trong tương lai của khách hàng.</p>\n<p>Lên kế hoạch thu thập các yêu cầu nghiệp vụ, bóc tách các luồng nghiệp vụ.</p>\n<p>Lên kế hoạch, tham gia hoặc chủ trì buổi khảo sát, họp với các bên liên quan; thu thập các yêu cầu hệ thống, các luồng nghiệp vụ và chuyển thành các case sử dụng trong Tài liệu kỹ thuật chức năng.</p>\n<p>Viết tài liệu chi tiết yêu cầu luồng nghiệp vụ của khách hàng (flow chart, BPMN, UML, SRS, story map, user story, BRD)</p>\n<p>Thiết kế mockup, prototype (Thiết kế mockup, wireframe, prototype qua drawio, balsamiq hoặc figma)</p>\n<p>Hỗ trợ, phối hợp với các&nbsp; đội thiết kế, phát triển, kiểm thử trong quá trình phát triển ứng dụng, đảm bảo tiến độ dự án và chất lượng sản phẩm.</p>\n<p>Thực hiện báo cáo công việc trên jira.</p>",
+    "requirements": "<p>Trình độ học vấn:</p>\n<p>&nbsp;&nbsp;- Tốt nghiệp đại học (ưu tiên chuyên ngành Công nghệ thông tin)</p>\n<p>Kiến thức/kinh nghiệm:</p>\n<p>&nbsp;&nbsp;- Có kinh nghiệm từ 03 năm trở lên.</p>\n<p>Khả năng khác:</p>\n<p>&nbsp;&nbsp;- Có kỹ năng giao tiếp, phân tích nghiệp vụ và tư duy logic tốt</p>\n<p>&nbsp;&nbsp;- Hiểu biết các công cụ thiết kế UML (ex:drawio)</p>\n<p>&nbsp;&nbsp;- Hiểu biết các công cụ thiết kế UI, mockup, prototype</p>\n<p>&nbsp;&nbsp;- Hiểu biết các tài liệu nghiệp vụ BA</p>\n<p>&nbsp;&nbsp;- Quản trị công việc theo scrum/agile</p>\n<p>&nbsp;&nbsp;- Có tinh thần học hỏi, năng động, làm việc nhóm hoặc độc lập</p>\n<p>&nbsp;&nbsp;- Tinh thần trách nhiệm cao trong công việc</p>\n<p>&nbsp;&nbsp;- Có thể đọc tài liệu bằng tiếng Anh</p>\n<p>&nbsp;&nbsp;- Đã làm trong các dự án lớn và bi UCase là một lợi thế.</p>\n<p>Giới tính, độ tuổi:</p>\n<p>&nbsp;&nbsp;- Không giới hạn</p>",
+    "benefits": "<p>Mức lương:</p>\n<p>&nbsp;&nbsp;- 20-30 triệu</p>\n<p>&nbsp;&nbsp;- Thưởng lương tháng 13 , thưởng lễ tết theo quy định và kết quả kinh doanh của Công ty.</p>\n<p>Thời gian làm việc:</p>\n<p>&nbsp;&nbsp;- Từ thứ hai đến hết sáng thứ bảy (Nghỉ chiều thứ bảy và chủ nhật)</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;+ Sáng : từ 08h00 đến 12h00</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;+ Chiều : Từ 13h00 đến 17h00</p>\n<p>&nbsp;&nbsp;- Nghỉ các ngày Lễ, Tết theo quy định của pháp luật</p>\n<p>Chế độ:</p>\n<p>&nbsp;&nbsp;- BHXH,BHYT,BHTN theo quy định của pháp luật</p>\n<p>&nbsp;&nbsp;- Bảo hiểm tai nạn và sức khỏe PTI</p>\n<p>&nbsp;&nbsp;- Du lịch/ Teambuilding 01 lần/năm</p>",
+    "img":"https://img.gtsc.vn/files/upload/news/tuyen-dung-chuyen-vien-phan-tich-nghiep-vu-20240923154037.jpg?id=1da3d7a2-c363-47ac-9aed-8ec6347c0410",
+    "exp":"> 3 năm kinh nghiệm"
+  },
+  {
+    "id":"3",
+    "title":"KỸ SƯ ĐIỆN TOÁN ĐÁM MÂY",
+    "address":"Số 103 Nguyễn Tuân, Thanh Xuân, Hà Nội",
+    "deadline":"31/05/2023",
+    "salary":"Up to 40 triệu/tháng",
+    "number":"2",
+    "description": "<p>Xây dựng hạ tầng điện toán đám mây (Openstack, AWS/GCP,…).</p>\n<p>Xây dựng hạ tầng lưu trữ Storage.</p>\n<p>Xây dựng nền tảng Kubernetes, và các giải pháp, dịch vụ tích hợp (ví dụ như: sao lưu và phục hồi – Backup &amp; Recovery,…).</p>\n<p>Xây dựng hệ thống cảnh báo (Monitoring) và hệ thống phiếu hỗ trợ khách hàng (Ticket).</p>\n<p>Vận hành và quản lý hệ thống, xử lý sự cố và thực hiện các ứng phó.</p>\n<p>Thực hiện hỗ trợ khách hàng tích hợp hoặc chuyển đổi hệ thống.</p>\n<p>Tham gia vào việc xây dựng phát triển sản phẩm của công ty, hỗ trợ đơn vị kinh doanh và tư vấn bán hàng trong các công việc cần hàm lượng tư vấn kỹ thuật chuyên sâu.</p>",
+    "requirements": "<p>Trình độ học vấn:</p>\n<p>&nbsp;&nbsp;- Tốt nghiệp Đại học chuyên ngành CNTT hoặc Điện tử Viễn thông.</p>\n<p>Kiến thức/kinh nghiệm:</p>\n<p>&nbsp;&nbsp;- Có kinh nghiệm thiết lập, vận hành khắc phục sự cố hạ tầng điện toán đám mây, máy chủ vật lý, máy ảo và hệ thống lưu trữ. (Ưu tiên các ứng viên có kinh nghiệm và các chứng chỉ liên quan về OpenStack, CEPH, AWS, Azure hoặc GCP Cloud).</p>\n<p>&nbsp;&nbsp;- Có kinh nghiệm về cài đặt, cấu hình và triển khai các hệ thống mã nguồn mở.</p>\n<p>&nbsp;&nbsp;- Có kinh nghiệm về xử lý HA cho hệ thống, các giải pháp sao lưu phục hồi dữ liệu,…</p>\n<p>Trình độ ngoại ngữ:</p>\n<p>&nbsp;&nbsp;- Yêu cầu thông thạo tiếng Anh, ưu tiên ứng viên Toeic ≥ 600 hoặc các chứng chỉ tương đương</p>\n<p>Khả năng khác:</p>\n<p>&nbsp;&nbsp;- Có khả năng viết tài liệu, đào tạo, trình bày giải pháp.</p>\n<p>&nbsp;&nbsp;- Có trách nhiệm và thái độ làm việc tốt.</p>\n<p>&nbsp;&nbsp;- Có kỹ năng giao tiếp, làm việc nhóm, giải quyết vấn đề và thuyết phục - khách hàng.</p>\n<p>&nbsp;&nbsp;- Có kỹ năng thuyết trình, thuyết phục.</p>\n<p>Giới tính, độ tuổi:</p>\n<p>&nbsp;&nbsp;- Nam.</p>",
+    "benefits": "<p>Mức lương:</p>\n<p>&nbsp;&nbsp;- Up to 40 triệu</p>\n<p>&nbsp;&nbsp;- Thưởng lương tháng 13 , thưởng lễ tết theo quy định và kết quả kinh doanh của Công ty.</p>\n<p>Thời gian làm việc:</p>\n<p>&nbsp;&nbsp;- Từ thứ hai đến hết sáng thứ bảy (Nghỉ chiều thứ bảy và chủ nhật)</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;+ Sáng : từ 08h00 đến 12h00</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;+ Chiều : Từ 13h00 đến 17h00</p>\n<p>&nbsp;&nbsp;- Nghỉ các ngày Lễ, Tết theo quy định của pháp luật</p>\n<p>Chế độ:</p>\n<p>&nbsp;&nbsp;- BHXH,BHYT,BHTN theo quy định của pháp luật</p>\n<p>&nbsp;&nbsp;- Bảo hiểm tai nạn và sức khỏe PTI</p>\n<p>&nbsp;&nbsp;- Du lịch/ Teambuilding 01 lần/năm</p>",
+    "img":"https://img.gtsc.vn/files/upload/news/tuyen-dung-ky-su-dien-toan-dam-may-20240923154208.jpg?id=28a9933b-3dd6-4b6d-aa54-d2132adadf41",
+    "exp":" "
+  }
+]

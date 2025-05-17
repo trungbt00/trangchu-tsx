@@ -1,0 +1,31 @@
+h2.title.main-color-red {
+  color: rgb(171, 45, 46);
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: start;
+  text-size-adjust: 100%;
+}
+
+.main-color-red.fw-bold.py-3 {
+  color: rgb(171, 45, 46);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: start;
+  padding: 16px 0px;
+  line-height: 1.4;
+}
+
+.py-3 {
+  text-align: start;
+}
+
+@media (max-width: 768px) {
+  h2.title.main-color-red {
+    font-size: 24px;
+  }
+  .main-color-red.fw-bold.py-3,
+  .py-3 {
+    font-size: 14px;
+  }
+}

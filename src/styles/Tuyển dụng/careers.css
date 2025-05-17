@@ -1,0 +1,238 @@
+/* Job list container */
+.background-container {
+  background-image: url("../../../src/assets/images/career_background.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: 0%;
+  background-size: cover;
+}
+
+.jobs-container {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 180px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.career_detail_content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+h4.description-title {
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2aa7df;
+  padding-bottom: 24px;
+  margin: 0%;
+}
+
+.description-content {
+  font-size: 18px;
+  font-family: Inter;
+  color: #666666;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+div.jobs-note {
+  padding: 24px;
+  border-radius: 12px;
+  border: solid 1px #7bdbf8;
+  background-color: #f7fdff;
+}
+
+.jobs-note-title {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2aa7df;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.jobs-note-content {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  text-align: left !important;
+  color: #484e56;
+}
+
+h2.job-title {
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+h2.job-heading {
+  width: 100%;
+  font-family: "Montserrat";
+  font-size: 38px;
+  font-weight: bold;
+  line-height: normal;
+  text-align: center;
+  color: #484e56;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+p.job-detail {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: left;
+}
+
+.job-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  padding: 20px;
+}
+
+.job-card {
+  background-color: #f8f9fc;
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+.job-title {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  color: #0d6efd;
+  margin: 10px 0px;
+}
+
+.job-meta {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.job-button-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.apply-button {
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  width: auto;
+  letter-spacing: normal;
+  text-align: center;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.apply-button:hover {
+  background-color: #0b5ed7;
+}
+
+img.jobs-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+  .job-list-container {
+    grid-template-columns: 1fr 1fr; /* Đảm bảo 2 cột khi màn hình nhỏ */
+    gap: 24px; /* Thêm khoảng cách giữa các ô */
+  }
+
+  .apply-button {
+    min-width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-card {
+    margin: 20px;
+  }
+  .job-list-container {
+    grid-template-columns: 1fr;
+  }
+
+  a.apply-button {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+  }
+
+  h4.description-title {
+    font-size: 24px;
+  }
+
+  div.description-content {
+    font-size: 16px;
+  }
+
+  h2.job-title {
+    font-size: 24px;
+  }
+
+  p.job-detail {
+    font-size: 14px;
+  }
+
+  h4.description-title {
+    font-size: 20px;
+  }
+
+  p.jobs-note-title {
+    font-size: 14px;
+  }
+
+  p.jobs-note-content {
+    font-size: 14px;
+  }
+}

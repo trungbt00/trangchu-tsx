@@ -33,17 +33,17 @@ export default function Footer() {
 
         <div className="footer-col">
           <p>
-            <strong>{i18n.t("head-office")}:</strong>
+            <strong>{i18n.t("head-office")}</strong>
             <br />
             {i18n.t("Head-address")}
           </p>
           <p>
-            <strong>{i18n.t("Central-office")}:</strong>
+            <strong>{i18n.t("Central-office")}</strong>
             <br />
             {i18n.t("Central-address")}
           </p>
           <p>
-            <strong>{i18n.t("South-office")}:</strong>
+            <strong>{i18n.t("South-office")}</strong>
             <br />
             {i18n.t("South-address")}
           </p>

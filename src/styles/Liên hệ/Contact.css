@@ -75,4 +75,8 @@
     font-size: 24px;
     padding-left: 20px;
   }
+
+    .form-row {
+    display: block;
+  }
 }

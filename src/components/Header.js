@@ -75,7 +75,7 @@ export default function Header() {
             <a href="/tuyen-dung">{i18n.t("careers")}</a>
           </li>
           <li>
-            <a href="/">{i18n.t("contact")}</a>
+            <a href="/lien-he">{i18n.t("contact")}</a>
           </li>
           <li className="lang-btn-wrapper">
             <button onClick={changeLanguage} className="button lang-btn">

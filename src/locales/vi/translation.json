@@ -51,6 +51,14 @@
   "product-info": "THÔNG TIN SẢN PHẨM:",
   "product-features": "THÔNG SỐ KỸ THUẬT:",
   "other_news": "Tin tức khác",
-  "loading": "Đang tải..."
+  "loading": "Đang tải...",
+  "name": "Họ và tên",
+  "phone": "Số điện thoại",
+  "message": "Ghi chú",
+  "send": "Gửi",
+  "enter-your-email": "Nhập email",
+  "enter-your-phone": "Nhập số điện thoại",
+  "enter-your-message": "Nhập ghi chú",
+  "enter-your-name": "Nhập họ và tên"
 }
 

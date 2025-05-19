@@ -7,6 +7,7 @@ import ProductDetail from "./pages/Chi tiết sản phẩm";
 import NewsDetail from "./pages/Chi tiết tin tức";
 import Careers from "./pages/Tuyển dụng";
 import JobDetails from "./pages/Chi tiết tuyển dụng";
+import Contact from "./pages/Liên hệ";
 function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/tin-tuc/:id" element={<NewsDetail />} />
         <Route path="/tuyen-dung" element={<Careers />} />
         <Route path="/tuyen-dung/:id" element={<JobDetails />} />
+        <Route path="/lien-he" element={<Contact />} />
       </Routes>
     </Router>
   );

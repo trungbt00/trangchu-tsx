@@ -51,7 +51,15 @@
   "product-info": "PRODUCT INFORMATION:",
   "product-features": "PRODUCT FEATURES:",
   "other_news": "Other News",
-  "loading": "Loading..."
+  "loading": "Loading...",
+  "name": "Full Name",
+  "phone": "Phone",
+  "message": "Message",
+  "send": "Send",
+  "enter-your-email": "Enter your email",
+  "enter-your-phone": "Enter your phone",
+  "enter-your-message": "Enter your message",
+  "enter-your-name": "Enter your name"
 
 }
 

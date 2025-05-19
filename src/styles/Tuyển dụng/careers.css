@@ -182,7 +182,6 @@ img.jobs-img {
 @media (max-width: 1024px) {
   .job-list-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
 

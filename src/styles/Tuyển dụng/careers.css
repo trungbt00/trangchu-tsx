@@ -181,11 +181,8 @@ img.jobs-img {
 
 @media (max-width: 1024px) {
   .job-list-container {
-<<<<<<< HEAD
     grid-template-columns: 1fr 1fr;
-=======
-    grid-template-columns: 1fr 1fr; 
->>>>>>> 2141b71564fea9c8398d1975e049923aff14ae72
+    grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
 

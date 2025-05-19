@@ -36,7 +36,6 @@ export default function ListSever() {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
-  // Get the first item for the current page (not necessarily the latest)
   const firstNews = paginated[0];
   return (
     <section className="container">

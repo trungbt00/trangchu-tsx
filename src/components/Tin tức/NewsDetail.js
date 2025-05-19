@@ -4,11 +4,13 @@ import "../../styles/Tin tức/news_info.css";
 import RelatedNews from "../../components/Tin tức/RelatedNews";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function NewsDetail() {
   const { id } = useParams();
   const [news, setNews] = useState(null);
   const [newsList, setNewsList] = useState([]);
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     fetch("/data/news.json")
@@ -20,7 +22,7 @@ export default function NewsDetail() {
       });
   }, [id]);
 
-  if (!news) return <div>Đang tải chi tiết...</div>;
+  if (!news) return <div>{i18n.t("loading")}</div>;
 
   return (
     <section className="container">

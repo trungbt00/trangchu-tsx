@@ -2,7 +2,7 @@
   background-image: linear-gradient(180deg, #fff, #2c90ce);
   width: 100%;
   height: auto;
-  margin-top: 100px !important;
+  margin-top: 60px !important;
 }
 
 .lien-he {
@@ -13,6 +13,7 @@
   text-align: start;
   line-height: 1.4;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
 }
 
 .contact-form {
@@ -53,11 +54,11 @@
 }
 
 .submit-btn {
-  margin-top: 30px;
+  margin-top: 50px;
   background-color: #b52d2d;
   color: white;
   font-weight: 700;
-  padding: 12px 32px;
+  padding: 6px 32px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -69,5 +70,14 @@
   form.contact-form {
     padding: 50px 20px;
     gap: 10px;
+  }
+
+  h2.lien-he {
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  .form-row {
+    display: block;
   }
 }

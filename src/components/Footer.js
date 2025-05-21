@@ -33,37 +33,52 @@ export default function Footer() {
 
         <div className="footer-col">
           <p>
-            <strong>{i18n.t("head-office")}:</strong>
+            <strong>{i18n.t("head-office")}</strong>
             <br />
             {i18n.t("Head-address")}
           </p>
           <p>
-            <strong>{i18n.t("Central-office")}:</strong>
+            <strong>{i18n.t("Central-office")}</strong>
             <br />
             {i18n.t("Central-address")}
           </p>
           <p>
-            <strong>{i18n.t("South-office")}:</strong>
+            <strong>{i18n.t("South-office")}</strong>
             <br />
             {i18n.t("South-address")}
           </p>
         </div>
 
         <div className="footer-col">
-          <h4>{i18n.t("connect")}</h4>
+          <h4 style={{ "margin-bottom": "10px" }}>{i18n.t("contact")}</h4>
           <ul>
             <li>
-              <a href="/">{i18n.t("home")}</a>
+              <p style={{ "margin-bottom": "8px" }}>Hotline: 0243 993 1919</p>
             </li>
-            <br></br>
             <li>
-              <a href="/gioi-thieu">{i18n.t("about")}</a>
+              <p style={{ "margin-bottom": "8px" }}>Mail: contact@gtsc.vn</p>
             </li>
-            <br></br>
+          </ul>
+        </div>
+
+        <div className="footer-col">
+          <h4 style={{ "margin-bottom": "10px" }}>{i18n.t("connect")}</h4>
+          <ul>
             <li>
-              <a href="/">{i18n.t("contact")}</a>
+              <a style={{ "margin-bottom": "8px" }} href="/">
+                {i18n.t("home")}
+              </a>
             </li>
-            <br></br>
+            <li>
+              <a style={{ "margin-bottom": "8px" }} href="/gioi-thieu">
+                {i18n.t("about")}
+              </a>
+            </li>
+            <li>
+              <a style={{ "margin-bottom": "8px" }} href="/">
+                {i18n.t("contact")}
+              </a>
+            </li>
           </ul>
         </div>
 

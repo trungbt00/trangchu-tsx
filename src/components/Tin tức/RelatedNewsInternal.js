@@ -14,7 +14,7 @@ export default function RelatedNews({ newsList }) {
           <div className="content">
             <a
               className="related-news-title"
-              href={`/tin-tuc/${item.id}`}
+              href={`/tin-tuc/noi-bo/${item.id}`}
               style={{ textDecoration: "none" }}
             >
               {item.title}

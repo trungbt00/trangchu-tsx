@@ -7,7 +7,7 @@ export default function Banner() {
   return (
     <section className="container-banner">
       <img src={image} alt="Banner" className="banner-img" />
-      <div className="center">{i18n.t("news")}</div>
+      <div className="center">{i18n.t("tech")}</div>
     </section>
   );
 }

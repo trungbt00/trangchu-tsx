@@ -25,16 +25,17 @@
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 700;
   height: auto;
-  line-height: 60px;
+  line-height: 50px;
   text-align: center;
   text-shadow: rgb(255, 255, 255) -1px 1px 0px, rgb(255, 255, 255) 1px 1px 0px,
     rgb(255, 255, 255) 1px -1px 0px, rgb(255, 255, 255) -1px -1px 0px;
   text-size-adjust: 100%;
   width: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin-top: 20px;
 }
 
 .center {
@@ -61,7 +62,7 @@
 }
 
 @media (max-width: 768px) {
-  .product-center {
+  div.product-center {
     font-size: 24px;
     line-height: 30px;
     margin-top: 20px;

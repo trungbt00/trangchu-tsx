@@ -132,10 +132,28 @@ h1.news-title {
   text-align: left;
 }
 
-.news-content-detail img {
-  width: 100%;
+.news-content-detail figure,
+.news-content-detail table {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.news-content-detail table img {
+  max-width: 100%;
   height: auto;
-  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.news-content-detail img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 p.news-excerpt-detail {

@@ -46,7 +46,7 @@ export default function JobList() {
                 <strong>{i18n.t("number")}: </strong> {job.number}
               </p>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-12">
+            <div class="col-lg-2 col-md-2 col-sm-12 job-button-col">
               <a href={`/tuyen-dung/${job.id}`} className="apply-button">
                 {i18n.t("apply")}
               </a>

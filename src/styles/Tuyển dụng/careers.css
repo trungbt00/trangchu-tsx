@@ -11,7 +11,7 @@
   margin: auto;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 180px;
+  padding-top: 150px;
   padding-bottom: 50px;
   width: 100%;
 }
@@ -171,6 +171,12 @@ p.job-detail {
   background-color: #0b5ed7;
 }
 
+.job-button-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 img.jobs-img {
   width: 100%;
   height: auto;
@@ -181,11 +187,7 @@ img.jobs-img {
 
 @media (max-width: 1024px) {
   .job-list-container {
-<<<<<<< HEAD
     grid-template-columns: 1fr 1fr;
-=======
-    grid-template-columns: 1fr 1fr; 
->>>>>>> 2141b71564fea9c8398d1975e049923aff14ae72
     gap: 24px;
   }
 
@@ -208,7 +210,7 @@ img.jobs-img {
   a.apply-button {
     width: 100%;
     text-align: center;
-    padding: 14px 20px;
+    padding: 14px 0px;
   }
 
   h4.description-title {

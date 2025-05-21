@@ -9,10 +9,12 @@ export default function ListSever() {
   const itemsPerPage = 10;
 
   useEffect(() => {
-    fetch("/data/news.json")
+    fetch("/data/cong-nghe.json")
       .then((res) => res.json())
       .then((data) => {
-        const sorted = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const sorted = data.newsList.sort(
+          (a, b) => new Date(b.creationTime) - new Date(a.creationTime)
+        );
         setNewsList(sorted);
       })
       .catch((err) => console.error("Lỗi tải bài viết:", err));
@@ -37,27 +39,26 @@ export default function ListSever() {
   };
 
   const firstNews = paginated[0];
+
   return (
     <section className="container">
       {firstNews && (
         <div className="first-news">
           <div className="first-news-img-container">
             <img
-              src={firstNews.img}
-              alt={firstNews.title}
+              src={firstNews.thumbnailImage}
+              alt={firstNews.name}
               className="first-news-img"
             />
           </div>
           <div className="first-news-content">
             <Link
-              to={`/tin-tuc/${firstNews.id}`}
+              to={`/tin-tuc/cong-nghe/${firstNews.slug}`}
               style={{ textDecoration: "none" }}
             >
-              <h3>{firstNews.title}</h3>
-              <p>{firstNews.excerpt}</p>
-              <a href={`/tin-tuc/${firstNews.id}`} className="first-news-link">
-                XEM CHI TIẾT →
-              </a>
+              <h3>{firstNews.name}</h3>
+              <p>{firstNews.shortDescription}</p>
+              <span className="first-news-link">XEM CHI TIẾT →</span>
             </Link>
           </div>
         </div>
@@ -66,13 +67,18 @@ export default function ListSever() {
       <div className="news-grid">
         {paginated.slice(1).map((news) => (
           <div className="news-item" key={news.id}>
-            <Link to={`/tin-tuc/${news.id}`} style={{ textDecoration: "none" }}>
-              <img src={news.img} alt={news.title} className="news-item-img" />
-              <div className="news-title">{news.title}</div>
-              <p className="news-excerpt">{news.excerpt}</p>
-              <a href={news.link} className="news-link">
-                XEM CHI TIẾT →
-              </a>
+            <Link
+              to={`/tin-tuc/cong-nghe/${news.slug}`}
+              style={{ textDecoration: "none" }}
+            >
+              <img
+                src={news.thumbnailImage}
+                alt={news.name}
+                className="news-item-img"
+              />
+              <div className="news-title">{news.name}</div>
+              <p className="news-excerpt">{news.shortDescription}</p>
+              <span className="news-link">XEM CHI TIẾT →</span>
             </Link>
           </div>
         ))}

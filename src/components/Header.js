@@ -68,8 +68,12 @@ export default function Header() {
               <a href="/">Camera</a>
             </div>
           </li>
-          <li>
-            <a href="/tin-tuc">{i18n.t("news")}</a>
+          <li className="dropdown">
+            <a className="dropbtn">{i18n.t("news")}</a>
+            <div className="dropdown-content">
+              <a href="/tin-tuc/noi-bo">{i18n.t("internal")}</a>
+              <a href="/tin-tuc/cong-nghe">{i18n.t("tech")}</a>
+            </div>
           </li>
           <li>
             <a href="/tuyen-dung">{i18n.t("careers")}</a>

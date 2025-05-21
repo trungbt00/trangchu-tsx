@@ -1,9 +1,8 @@
-import { React } from "react";
+import { React, useEffect, useState } from "react";
 import "../../styles/style.css";
 import "../../styles/Tin tức/news_info.css";
-import RelatedNews from "../../components/Tin tức/RelatedNews";
+import RelatedNews from "./RelatedNewsInternal";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function NewsDetail() {
@@ -13,13 +12,15 @@ export default function NewsDetail() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    fetch("/data/news.json")
+    fetch("/data/internal-news-detail.json")
       .then((res) => res.json())
       .then((data) => {
-        const found = data.find((p) => p.id === id);
+        const articles = data.data || [];
+        const found = articles.find((item) => item.slug === id);
         setNews(found);
-        setNewsList(data);
-      });
+        setNewsList(articles);
+      })
+      .catch((err) => console.error("Lỗi tải bài viết:", err));
   }, [id]);
 
   if (!news) return <div>{i18n.t("loading")}</div>;
@@ -27,16 +28,16 @@ export default function NewsDetail() {
   return (
     <section className="container">
       <div className="s-container"></div>
-      <p className="date">{news.date}</p>
-      <h1 className="news-title">{news.title}</h1>
-      <p className="news-excerpt-detail">{news.excerpt}</p>
+      {news.date && <p className="date">{news.date}</p>}
+      <h1 className="news-title">{news.name}</h1>
+      <p className="news-excerpt-detail">{news.shortDescription}</p>
       <div
         className="news-content-detail"
         dangerouslySetInnerHTML={{ __html: news.content }}
       />
-      <hr></hr>
+      <hr />
       <RelatedNews
-        newsList={newsList.filter((item) => item.id !== id).slice(0, 5)}
+        newsList={newsList.filter((item) => item.slug !== id).slice(0, 5)}
       />
     </section>
   );

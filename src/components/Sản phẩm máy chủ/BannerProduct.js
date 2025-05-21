@@ -11,12 +11,13 @@ export default function Banner() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    fetch("/data/products.json")
+    fetch("/data/may-chu.json")
       .then((res) => res.json())
       .then((data) => {
-        const found = data.find((p) => p.id === id);
-        setProduct(found);
-      });
+        const found = data.data.find((p) => p.slug === id);
+        setProduct(found || null);
+      })
+      .catch((err) => console.error("Lỗi tải sản phẩm:", err));
   }, [id]);
 
   if (!product) return <div>{i18n.t("loading")}</div>;
@@ -24,7 +25,7 @@ export default function Banner() {
   return (
     <section className="container-banner">
       <img src={image} alt="Banner" className="banner-img" />
-      <div className="product-center">{product.title}</div>
+      <div className="product-center">{product.name}</div>
     </section>
   );
 }

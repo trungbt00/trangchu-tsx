@@ -47,30 +47,13 @@
   line-height: 1.6;
 }
 
-.footer-col h4 {
+.container h4 {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.footer-col ul {
-  background-color: white;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  white-space: normal;
-}
-
-.footer-col ul li {
-  display: block !important;
-  margin-bottom: 0;
-  line-height: 1;
-  padding: 0;
-}
-
-.footer-col ul li a {
+.container a {
   display: inline-block !important;
   font-size: 14px;
   color: #1e1e1e;
@@ -78,6 +61,12 @@
   white-space: nowrap;
   line-height: 1;
 }
+
+.container p {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
 .footer-col:nth-child(2) {
   text-align: left;
 }

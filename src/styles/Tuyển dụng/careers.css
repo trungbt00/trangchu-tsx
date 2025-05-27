@@ -78,7 +78,7 @@ div.jobs-note {
   color: #484e56;
 }
 
-h2.job-title {
+.job-title {
   font-family: "Montserrat";
   font-size: 32px;
   font-weight: bold;
@@ -87,9 +87,31 @@ h2.job-title {
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #fff;
+  color: #ffffff;
   width: 100%;
-  padding-bottom: 20px;
+  display: flex;
+  overflow: visible;
+  text-overflow: unset;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.job-title-banner {
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff !important;
+  width: 100%;
+  display: flex;
+  overflow: visible;
+  text-overflow: unset;
+  white-space: normal;
+  word-break: break-word;
 }
 
 h2.job-heading {
@@ -110,8 +132,8 @@ p.job-detail {
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
-  color: #ffffff;
-  text-align: left;
+  color: #ffffff !important;
+  text-align: left !important;
 }
 
 .job-list-container {

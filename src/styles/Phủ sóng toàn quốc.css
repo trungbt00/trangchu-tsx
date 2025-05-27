@@ -4,26 +4,8 @@
   padding: 80px 20px;
   transition: all 0.5s ease;
   overflow: hidden;
-  height: auto 499.312px;
-  width: auto 1548px;
-}
-
-.nationwide .grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
-  justify-content: center;
-
+  height: auto;
   width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
-
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  color: rgb(30, 30, 30);
-  text-align: center;
 }
 
 .nationwide h1 {
@@ -41,14 +23,12 @@
   display: block;
   font-family: Inter, sans-serif;
   font-size: 18px;
-  height: 291.516px;
   line-height: 32.4px;
   margin-block-end: 18px;
   margin-block-start: 18px;
   margin-inline-end: 0px;
   margin-inline-start: 0px;
   text-align: left;
-  unicode-bidi: isolate;
 }
 
 .nationwide .text {
@@ -85,11 +65,14 @@
 
 .nationwide-video {
   width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   object-fit: cover;
   transition: transform 0.5s ease;
+  display: block;
+  margin: 0 auto;
 }
 
 .nationwide-video:hover {
@@ -131,10 +114,7 @@
 @media (max-width: 768px) {
   section.nationwide {
     padding: 40px 20px;
-  }
-
-  div.container.grid {
-    padding: 0%;
+    padding-bottom: 80px;
   }
 
   .nationwide h1 {
@@ -152,7 +132,7 @@
     color: rgb(30, 30, 30);
     display: block;
     font-family: Inter, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.8;
     margin-block-end: 18px;
     margin-block-start: 18px;
@@ -160,5 +140,16 @@
     margin-inline-start: 0px;
     text-align: left;
     unicode-bidi: isolate;
+  }
+
+  .nationwide .text {
+    text-align: justify;
+  }
+
+  .nationwide-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }

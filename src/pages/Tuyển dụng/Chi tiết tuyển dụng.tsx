@@ -1,10 +1,10 @@
-import { React } from "react";
+import React from "react";
 import Header from "../../components/Header";
 import JobDetails from "../../components/Tuyển dụng/JobDetails";
 import JobDetailsBanner from "../../components/Tuyển dụng/JobDetailsBanner";
 import Footer from "../../components/Footer";
 import "../../styles/style.css";
-export default function Sever() {
+const JobsDetail: React.FC = () => {
   return (
     <>
       <Header />
@@ -13,4 +13,6 @@ export default function Sever() {
       <Footer />
     </>
   );
-}
+};
+
+export default JobsDetail;

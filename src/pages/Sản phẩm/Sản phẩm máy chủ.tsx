@@ -1,10 +1,10 @@
-import { React } from "react";
+import React from "react";
 import Header from "../../components/Header";
 import Banner from "../../components/Sản phẩm máy chủ/Banner";
 import ListSever from "../../components/Sản phẩm máy chủ/ListSever";
 import Footer from "../../components/Footer";
 import "../../styles/style.css";
-export default function Sever() {
+const Server: React.FC = () => {
   return (
     <>
       <Header />
@@ -13,4 +13,6 @@ export default function Sever() {
       <Footer />
     </>
   );
-}
+};
+
+export default Server;

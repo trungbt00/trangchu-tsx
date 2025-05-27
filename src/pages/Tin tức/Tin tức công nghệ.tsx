@@ -1,10 +1,10 @@
-import { React } from "react";
+import React from "react";
 import Header from "../../components/Header";
 import Banner from "../../components/Tin tức/BannerTech";
 import ListNews from "../../components/Tin tức/ListNewsTechnology";
 import Footer from "../../components/Footer";
 import "../../styles/style.css";
-export default function Sever() {
+const TechNews: React.FC = () => {
   return (
     <>
       <Header />
@@ -13,4 +13,5 @@ export default function Sever() {
       <Footer />
     </>
   );
-}
+};
+export default TechNews;

@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Intro from "../components/Intro";
@@ -9,7 +9,7 @@ import News from "../components/News";
 import Partners from "../components/Partners";
 import Footer from "../components/Footer";
 import "../styles/style.css";
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <>
       <Header />
@@ -23,4 +23,5 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+export default Home;

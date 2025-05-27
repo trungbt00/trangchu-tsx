@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import Header from "../components/Header";
 import Banner from "../components/Giới thiệu/Banner";
 import Section1 from "../components/Giới thiệu/section1";
@@ -7,7 +7,7 @@ import Section3 from "../components/Giới thiệu/section3";
 import Partners from "../components/Partners";
 import Footer from "../components/Footer";
 import "../styles/style.css";
-export default function About() {
+const Intro: React.FC = () => {
   return (
     <>
       <Header />
@@ -19,4 +19,6 @@ export default function About() {
       <Footer />
     </>
   );
-}
+};
+
+export default Intro;

@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/images/MAN08824.jpg"; // Import ảnh
+import image from "../assets/images/MAN08824.jpg";
 import "../styles/style.css";
 
 const Banner: React.FC = () => {

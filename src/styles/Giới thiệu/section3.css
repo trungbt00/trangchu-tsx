@@ -1,6 +1,6 @@
 h2.title.main-color-red {
   color: rgb(171, 45, 46);
-  font-size: 35px;
+  font-size: 35px !important;
   font-weight: 700;
   margin-bottom: 8px;
   text-align: start;

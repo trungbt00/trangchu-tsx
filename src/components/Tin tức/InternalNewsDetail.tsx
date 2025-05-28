@@ -36,9 +36,6 @@ const NewsDetail: React.FC = () => {
         <Title level={1} className="news-title">
           {news.name}
         </Title>
-        <Paragraph className="news-excerpt-detail">
-          {news.shortDescription}
-        </Paragraph>
         <div
           className="news-content-detail"
           dangerouslySetInnerHTML={{ __html: news.content }}

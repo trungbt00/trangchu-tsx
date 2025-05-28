@@ -57,22 +57,19 @@
 }
 
 .nationwide .image {
-  flex: 1 1 40%;
-  animation: slideInRight 1s ease forwards;
-  opacity: 0;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .nationwide-video {
   width: 100%;
-  max-width: 100%;
   height: auto;
+  max-height: 100%;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-  transition: transform 0.5s ease;
-  display: block;
-  margin: 0 auto;
 }
 
 .nationwide-video:hover {
@@ -89,7 +86,6 @@
   opacity: 1;
 }
 
-/* Fade-in animation */
 @keyframes slideInLeft {
   from {
     transform: translateX(-40px);
@@ -114,7 +110,6 @@
 @media (max-width: 768px) {
   section.nationwide {
     padding: 40px 20px;
-    padding-bottom: 80px;
   }
 
   .nationwide h1 {

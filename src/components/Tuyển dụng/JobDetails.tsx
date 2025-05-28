@@ -47,7 +47,6 @@ const JobsDetail: React.FC = () => {
       />
 
       <Row gutter={[32, 32]}>
-        {/* LEFT COLUMN */}
         <Col xs={24} md={16}>
           <Title level={4} className="description-title">
             {i18n.t("jd")}
@@ -77,7 +76,6 @@ const JobsDetail: React.FC = () => {
           <Divider />
         </Col>
 
-        {/* RIGHT COLUMN */}
         <Col xs={24} md={8}>
           <Card
             bordered

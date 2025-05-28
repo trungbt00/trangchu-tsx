@@ -27,19 +27,14 @@ const Header: React.FC = () => {
     if (menuOpen && topBarRef.current && navRef.current && isMobile) {
       const height = topBarRef.current.offsetHeight;
       navRef.current.style.marginTop = `${height}px`;
-      // Đảm bảo display được quản lý qua class 'active' thay vì style trực tiếp
-      // navRef.current.style.display = "flex"; // Có thể bỏ dòng này nếu CSS đã đủ
     } else if (navRef.current) {
       navRef.current.style.marginTop = "";
-      // Đảm bảo display được quản lý qua class 'active' thay vì style trực tiếp
-      // navRef.current.style.display = ""; // Có thể bỏ dòng này nếu CSS đã đủ
     }
   }, [menuOpen]);
 
-  // Thêm hàm để đóng menu mobile khi chọn một mục
   const handleMenuItemClick = () => {
     if (window.innerWidth <= 768) {
-      setMenuOpen(false); // Đóng menu mobile sau khi chọn
+      setMenuOpen(false);
     }
   };
 

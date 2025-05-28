@@ -31,7 +31,6 @@ const NewsDetail: React.FC = () => {
       <div className="s-container"></div>
       {news.date && <p className="date">{news.date}</p>}
       <h1 className="news-title">{news.name}</h1>
-      <p className="news-excerpt-detail">{news.shortDescription}</p>
       <div
         className="news-content-detail"
         dangerouslySetInnerHTML={{ __html: news.content }}

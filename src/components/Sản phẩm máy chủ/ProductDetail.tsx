@@ -62,9 +62,13 @@ export default function ProductDetail() {
                 height: 220,
                 objectFit: "contain",
                 marginBottom: 16,
+                marginTop: 16,
               }}
             />
-            <Title level={5} style={{ color: "#2d8fcc", minHeight: 48 }}>
+            <Title
+              level={5}
+              style={{ color: "#2d8fcc", minHeight: 48, margin: 0 }}
+            >
               {product.name}
             </Title>
           </Card>

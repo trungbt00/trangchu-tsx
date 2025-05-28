@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Row, Col, Card, Typography, Pagination } from "antd";
+import { Row, Col, Card, Pagination } from "antd";
 import "../../styles/style.css";
 import "../../styles/Tin tức/news_info.css";
-
-const { Title, Paragraph } = Typography;
 
 interface NewsItem {
   id: string;
@@ -34,7 +32,6 @@ const ListNewsInternal: React.FC = () => {
       .catch((err) => console.error("Lỗi tải bài viết:", err));
   }, []);
 
-  const totalPages = Math.ceil(newsList.length / itemsPerPage);
   const paginated = newsList.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage

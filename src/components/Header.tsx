@@ -46,7 +46,7 @@ const Header: React.FC = () => {
           key: "1",
           label: (
             <a href="/may-chu" onClick={handleMenuItemClick}>
-              {i18n.t("server")}
+              {i18n.t("server") as string}
             </a>
           ),
         },
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
           key: "1",
           label: (
             <a href="/tin-tuc/noi-bo" onClick={handleMenuItemClick}>
-              {i18n.t("internal")}
+              {i18n.t("internal") as string}
             </a>
           ),
         },
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
           key: "2",
           label: (
             <a href="/tin-tuc/cong-nghe" onClick={handleMenuItemClick}>
-              {i18n.t("tech")}
+              {i18n.t("tech") as string}
             </a>
           ),
         },
@@ -115,12 +115,12 @@ const Header: React.FC = () => {
           </li>
           <li>
             <a href="/" onClick={handleMenuItemClick}>
-              {i18n.t("home")}
+              {i18n.t("home") as string}
             </a>
           </li>
           <li>
             <a href="/gioi-thieu" onClick={handleMenuItemClick}>
-              {i18n.t("about")}
+              {i18n.t("about") as string}
             </a>
           </li>
           <li>
@@ -130,7 +130,7 @@ const Header: React.FC = () => {
             >
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
-                  {i18n.t("products")}
+                  {i18n.t("products") as string}
                   <DownOutlined />
                 </Space>
               </a>
@@ -143,7 +143,7 @@ const Header: React.FC = () => {
             >
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
-                  {i18n.t("news")}
+                  {i18n.t("news") as string}
                   <DownOutlined />
                 </Space>
               </a>
@@ -151,12 +151,12 @@ const Header: React.FC = () => {
           </li>
           <li>
             <a href="/tuyen-dung" onClick={handleMenuItemClick}>
-              {i18n.t("careers")}
+              {i18n.t("careers") as string}
             </a>
           </li>
           <li>
             <a href="/lien-he" onClick={handleMenuItemClick}>
-              {i18n.t("contact")}
+              {i18n.t("contact") as string}
             </a>
           </li>
           <li className="lang-btn-wrapper">

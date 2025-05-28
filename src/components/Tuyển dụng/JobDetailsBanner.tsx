@@ -31,7 +31,7 @@ const JobsDetailBanner: React.FC = () => {
       .catch((err) => console.error("Lỗi tải chi tiết công việc:", err));
   }, [id]);
 
-  if (!job) return <div>{i18n.t("loading")}</div>;
+  if (!job) return <div>{i18n.t("loading") as string}</div>;
 
   return (
     <section className="background-container">
@@ -44,13 +44,13 @@ const JobsDetailBanner: React.FC = () => {
           <Col xs={24} md={12}>
             <Paragraph className="job-detail" style={{ color: "#ffffff" }}>
               <Text strong style={{ color: "#ffffff" }}>
-                {i18n.t("location")}:
+                {i18n.t("location") as string}:
               </Text>{" "}
               {job.address}
             </Paragraph>
             <Paragraph className="job-detail" style={{ color: "#ffffff" }}>
               <Text strong style={{ color: "#ffffff" }}>
-                {i18n.t("salary")}:
+                {i18n.t("salary") as string}:
               </Text>{" "}
               {job.salary}
             </Paragraph>
@@ -59,13 +59,13 @@ const JobsDetailBanner: React.FC = () => {
           <Col xs={24} md={12}>
             <Paragraph className="job-detail" style={{ color: "#ffffff" }}>
               <Text strong style={{ color: "#ffffff" }}>
-                {i18n.t("deadline")}:
+                {i18n.t("deadline") as string}:
               </Text>{" "}
               {job.deadline}
             </Paragraph>
             <Paragraph className="job-detail" style={{ color: "#ffffff" }}>
               <Text strong style={{ color: "#ffffff" }}>
-                {i18n.t("number")}:
+                {i18n.t("number") as string}:
               </Text>{" "}
               {job.number}
             </Paragraph>

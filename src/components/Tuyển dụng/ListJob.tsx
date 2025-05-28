@@ -26,12 +26,12 @@ const JobList: React.FC = () => {
       .catch((err) => console.error("Lỗi tải danh sách công việc:", err));
   }, []);
 
-  if (!jobs.length) return <div>{i18n.t("loading")}</div>;
+  if (!jobs.length) return <div>{i18n.t("loading") as string}</div>;
 
   return (
     <div className="container">
       <Title level={2} className="job-heading">
-        {i18n.t("recruitment")}
+        {i18n.t("recruitment") as string}
       </Title>
 
       {jobs.map((job) => (
@@ -55,26 +55,28 @@ const JobList: React.FC = () => {
 
             <Col xs={24} md={12} lg={10}>
               <Paragraph style={{ marginBottom: 8 }}>
-                <Text strong>{i18n.t("location")}: </Text> {job.address}
+                <Text strong>{i18n.t("location") as string}: </Text>{" "}
+                {job.address}
               </Paragraph>
               <Paragraph>
-                <Text strong>{i18n.t("deadline")}: </Text> {job.deadline}
+                <Text strong>{i18n.t("deadline") as string}: </Text>{" "}
+                {job.deadline}
               </Paragraph>
             </Col>
 
             <Col xs={24} md={12} lg={6}>
               <Paragraph style={{ marginBottom: 8 }}>
-                <Text strong>{i18n.t("salary")}: </Text> {job.salary}
+                <Text strong>{i18n.t("salary") as string}: </Text> {job.salary}
               </Paragraph>
               <Paragraph>
-                <Text strong>{i18n.t("number")}: </Text> {job.number}
+                <Text strong>{i18n.t("number") as string}: </Text> {job.number}
               </Paragraph>
             </Col>
 
             <Col xs={24} md={24} lg={2} className="job-button-col">
               <a href={`/tuyen-dung/${job.id}`}>
                 <Button type="primary" className="apply-button" block>
-                  {i18n.t("apply")}
+                  {i18n.t("apply") as string}
                 </Button>
               </a>
             </Col>

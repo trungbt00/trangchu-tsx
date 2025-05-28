@@ -8,7 +8,7 @@ const Banner: React.FC = () => {
   return (
     <section className="container-banner">
       <img src={image} alt="Banner" className="banner-img" />
-      <h2 className="center">{i18n.t("about")}</h2>
+      <h2 className="center">{i18n.t("about") as string}</h2>
     </section>
   );
 };

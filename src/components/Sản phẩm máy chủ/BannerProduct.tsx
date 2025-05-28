@@ -25,7 +25,7 @@ export default function Banner() {
       .catch((err) => console.error("Lỗi tải sản phẩm:", err));
   }, [id]);
 
-  if (!product) return <div>{i18n.t("loading")}</div>;
+  if (!product) return <div>{i18n.t("loading") as string}</div>;
 
   return (
     <section className="container-banner">

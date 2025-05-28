@@ -37,8 +37,8 @@ const Nationwide: React.FC = () => {
         <Row gutter={[40, 40]} align="middle">
           <Col xs={24} md={12}>
             <div className="text" ref={textRef}>
-              <h1 className="heading">{i18n.t("national")}</h1>
-              <p>{i18n.t("nationwide")}</p>
+              <h1 className="heading">{i18n.t("national") as string}</h1>
+              <p>{i18n.t("nationwide") as string}</p>
             </div>
           </Col>
           <Col xs={24} md={12}>

@@ -27,7 +27,7 @@ const NewsDetail: React.FC = () => {
       .catch((err) => console.error("Lỗi tải bài viết:", err));
   }, [id]);
 
-  if (!news) return <div>{i18n.t("loading")}</div>;
+  if (!news) return <div>{i18n.t("loading") as string}</div>;
 
   return (
     <section className="container">

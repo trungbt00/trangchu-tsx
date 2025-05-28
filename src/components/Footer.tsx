@@ -38,39 +38,39 @@ const Footer: React.FC = () => {
               style={{ maxWidth: 150, marginBottom: 16 }}
             />
             <p>
-              <strong>{i18n.t("head-office")}</strong>
+              <strong>{i18n.t("head-office") as string}</strong>
               <br />
-              {i18n.t("Head-address")}
+              {i18n.t("Head-address") as string}
             </p>
             <br></br>
             <p>
-              <strong>{i18n.t("Central-office")}</strong>
+              <strong>{i18n.t("Central-office") as string}</strong>
               <br />
-              {i18n.t("Central-address")}
+              {i18n.t("Central-address") as string}
             </p>
             <br></br>
             <p>
-              <strong>{i18n.t("South-office")}</strong>
+              <strong>{i18n.t("South-office") as string}</strong>
               <br />
-              {i18n.t("South-address")}
+              {i18n.t("South-address") as string}
             </p>
           </Col>
 
           <Col xs={24} sm={12} md={5}>
             <br></br>
-            <h4>{i18n.t("contact")}</h4>
+            <h4>{i18n.t("contact") as string}</h4>
             <p>Hotline: 0243 993 1919</p>
             <p>Mail: contact@gtsc.vn</p>
             <br></br>
-            <h4>{i18n.t("connect")}</h4>
+            <h4>{i18n.t("connect") as string}</h4>
             <p>
-              <a href="/">{i18n.t("home")}</a>
+              <a href="/">{i18n.t("home") as string}</a>
             </p>
             <p>
-              <a href="/gioi-thieu">{i18n.t("about")}</a>
+              <a href="/gioi-thieu">{i18n.t("about") as string}</a>
             </p>
             <p>
-              <a href="/">{i18n.t("contact")}</a>
+              <a href="/">{i18n.t("contact") as string}</a>
             </p>
           </Col>
 

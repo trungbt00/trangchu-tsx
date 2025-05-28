@@ -36,8 +36,8 @@ const Intro: React.FC = () => {
   return (
     <section ref={introRef} className={`intro ${isVisible ? "visible" : ""}`}>
       <div className="intro-container">
-        <h1>{i18n.t("company-name")}</h1>
-        <p>{i18n.t("intro")}</p>
+        <h1>{i18n.t("company-name") as string}</h1>
+        <p>{i18n.t("intro") as string}</p>
       </div>
     </section>
   );

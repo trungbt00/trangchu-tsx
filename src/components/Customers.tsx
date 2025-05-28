@@ -75,10 +75,10 @@ const Customers: React.FC = () => {
     <section className="customers fade-in-on-scroll">
       <div className="container customers-container">
         <div className="customers-text">
-          <h1>{i18n.t("customers")}</h1>
-          <p>{i18n.t("customers-script1")}</p>
-          <p>{i18n.t("customers-script2")}</p>
-          <p>{i18n.t("customers-script3")}</p>
+          <h1>{i18n.t("customers") as string}</h1>
+          <p>{i18n.t("customers-script1") as string}</p>
+          <p>{i18n.t("customers-script2") as string}</p>
+          <p>{i18n.t("customers-script3") as string}</p>
         </div>
 
         <Row gutter={[24, 24]} justify="center" className="customers-logos">

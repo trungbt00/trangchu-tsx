@@ -11,7 +11,7 @@ const RelatedNews: React.FC<RelatedNewsProps> = ({ newsList }) => {
 
   return (
     <div className="related-news-wrapper">
-      <h3 className="related-news">{i18n.t("other_news")}</h3>
+      <h3 className="related-news">{i18n.t("other_news") as string}</h3>
       {newsList.map((item) => (
         <div className="related-news-item" key={item.slug}>
           <div className="icon">➤</div>

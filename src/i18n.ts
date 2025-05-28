@@ -18,6 +18,7 @@ i18n
     resources,
     fallbackLng: "vi",
     interpolation: { escapeValue: false },
+    returnObjects: false,
   });
 
 export default i18n;

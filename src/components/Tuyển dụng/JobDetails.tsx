@@ -34,7 +34,7 @@ const JobsDetail: React.FC = () => {
       .catch((err) => console.error("Lỗi tải chi tiết công việc:", err));
   }, [id]);
 
-  if (!job) return <div>{i18n.t("loading")}</div>;
+  if (!job) return <div>{i18n.t("loading") as string}</div>;
 
   return (
     <section className="career_detail_content">
@@ -49,7 +49,7 @@ const JobsDetail: React.FC = () => {
       <Row gutter={[32, 32]}>
         <Col xs={24} md={16}>
           <Title level={4} className="description-title">
-            {i18n.t("jd")}
+            {i18n.t("jd") as string}
           </Title>
           <div
             className="description-content"
@@ -58,7 +58,7 @@ const JobsDetail: React.FC = () => {
           <Divider />
 
           <Title level={4} className="description-title">
-            {i18n.t("requirements")}
+            {i18n.t("requirements") as string}
           </Title>
           <div
             className="description-content"
@@ -67,7 +67,7 @@ const JobsDetail: React.FC = () => {
           <Divider />
 
           <Title level={4} className="description-title">
-            {i18n.t("benefits")}
+            {i18n.t("benefits") as string}
           </Title>
           <div
             className="description-content"
@@ -82,22 +82,22 @@ const JobsDetail: React.FC = () => {
             style={{ backgroundColor: "#f7fdff", borderColor: "#7bdbf8" }}
           >
             <Paragraph className="jobs-note-title">
-              {i18n.t("experience")}
+              {i18n.t("experience") as string}
             </Paragraph>
             <Paragraph className="jobs-note-content">{job.exp}</Paragraph>
 
             <Paragraph className="jobs-note-title">
-              {i18n.t("number")}
+              {i18n.t("number") as string}
             </Paragraph>
             <Paragraph className="jobs-note-content">{job.number}</Paragraph>
 
             <Paragraph className="jobs-note-title">
-              {i18n.t("deadline")}
+              {i18n.t("deadline") as string}
             </Paragraph>
             <Paragraph className="jobs-note-content">{job.deadline}</Paragraph>
 
             <Paragraph className="jobs-note-title">
-              {i18n.t("location")}
+              {i18n.t("location") as string}
             </Paragraph>
             <Paragraph className="jobs-note-content">{job.address}</Paragraph>
           </Card>

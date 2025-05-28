@@ -7,7 +7,7 @@ const Banner: React.FC = () => {
   return (
     <section className="container-banner">
       <img src={image} alt="Banner" className="banner-img" />
-      <div className="center">{i18n.t("internal")}</div>
+      <div className="center">{i18n.t("internal") as string}</div>
     </section>
   );
 };

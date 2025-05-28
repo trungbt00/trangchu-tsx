@@ -29,7 +29,7 @@ export default function News() {
   return (
     <section className="news">
       <div className="container">
-        <h1 className="heading">{i18n.t("NEWS")}</h1>
+        <h1 className="heading">{i18n.t("NEWS") as string}</h1>
         <Row gutter={[24, 24]} className="news-row">
           {newsList.slice(0, 3).map((news) => (
             <Col key={news.slug} xs={24} sm={12} md={8}>

@@ -39,7 +39,7 @@ const Fields: React.FC = () => {
   return (
     <section className="fields">
       <div className="container">
-        <h1 className="heading">{i18n.t("field")}</h1>
+        <h1 className="heading">{i18n.t("field") as string}</h1>
         <div className="field-grid">
           {data.map((item, index) => (
             <div className="field-item" key={index}>

@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
   return (
     <section className="contact-container">
       <div className="container">
-        <h2 className="lien-he">{i18n.t("contact")}:</h2>
+        <h2 className="lien-he">{i18n.t("contact") as string}:</h2>
         <Row justify="center">
           <Col xs={24} sm={20} md={16} lg={10} xl={8}>
             <Form
@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
               <Row gutter={16}>
                 <Col xs={24} sm={12}>
                   <Form.Item
-                    label={i18n.t("name")}
+                    label={i18n.t("name") as string}
                     name="name"
                     rules={[
                       {
@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
                 </Col>
                 <Col xs={24} sm={12}>
                   <Form.Item
-                    label={i18n.t("phone")}
+                    label={i18n.t("phone") as string}
                     name="phone"
                     rules={[
                       {
@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
                 <Input placeholder={i18n.t("enter-your-email") as string} />
               </Form.Item>
               <Form.Item
-                label={i18n.t("message")}
+                label={i18n.t("message") as string}
                 name="message"
                 rules={[
                   {
@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
                     padding: "6px 32px",
                   }}
                 >
-                  {i18n.t("send")}
+                  {i18n.t("send") as string}
                 </Button>
               </Form.Item>
             </Form>

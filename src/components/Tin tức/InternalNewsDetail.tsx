@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Typography } from "antd";
+import { Typography, Divider, Spin } from "antd";
 import { useTranslation } from "react-i18next";
 import "../../styles/style.css";
 import "../../styles/Tin tức/news_info.css";
 import RelatedNews from "./RelatedNewsInternal";
 import { NewsItem } from "../../types/news";
 
-const { Title, Paragraph } = Typography;
+const { Title, Paragraph, Text } = Typography;
 
 const NewsDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [news, setNews] = useState<NewsItem | null>(null);
   const [newsList, setNewsList] = useState<NewsItem[]>([]);
-  const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetch("/data/internal-news-detail.json")
@@ -27,20 +27,33 @@ const NewsDetail: React.FC = () => {
       .catch((err) => console.error("Lỗi tải bài viết:", err));
   }, [id]);
 
-  if (!news) return <div>{i18n.t("loading") as string}</div>;
+  if (!news) {
+    return (
+      <div style={{ textAlign: "center", marginTop: 48 }}>
+        <Spin tip={t("loading") as string} />
+      </div>
+    );
+  }
 
   return (
     <section className="container">
       <div className="s-container">
-        {news.date && <p className="date">{news.date}</p>}
-        <Title level={1} className="news-title">
+        {news.date && (
+          <Text type="secondary" style={{ display: "block", marginBottom: 12 }}>
+            {news.date}
+          </Text>
+        )}
+
+        <Title level={2} className="news-title">
           {news.name}
         </Title>
+
         <div
           className="news-content-detail"
           dangerouslySetInnerHTML={{ __html: news.content }}
         />
-        <hr />
+
+        <Divider />
         <RelatedNews
           newsList={newsList.filter((item) => item.slug !== id).slice(0, 5)}
         />

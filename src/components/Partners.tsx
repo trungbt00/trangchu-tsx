@@ -1,14 +1,18 @@
 import React, { useEffect, useRef } from "react";
-import "../styles/Đối tác.css";
+import { Typography } from "antd";
 import { useTranslation } from "react-i18next";
+import "../styles/Đối tác.css";
+import "../styles/style.css";
+
 import logo1 from "../assets/Đối tác/p1.png";
 import logo2 from "../assets/Đối tác/p2.png";
 import logo3 from "../assets/Đối tác/p3.png";
 import logo4 from "../assets/Đối tác/p4.png";
-import "../styles/style.css";
+
+const { Title } = Typography;
 
 const Partners: React.FC = () => {
-  const partnerRef = useRef<HTMLElement | null>(null);
+  const partnerRef = useRef<HTMLDivElement | null>(null);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -32,32 +36,20 @@ const Partners: React.FC = () => {
     };
   }, []);
 
-  const logos: string[] = [
-    logo1,
-    logo2,
-    logo3,
-    logo4,
-    logo1,
-    logo2,
-    logo3,
-    logo4,
-    logo1,
-    logo2,
-    logo3,
-    logo4,
-    logo1,
-    logo2,
-    logo3,
-    logo4,
-  ];
+  const logos: string[] = [logo1, logo2, logo3, logo4];
+
+  const repeatedLogos = [...logos, ...logos, ...logos];
 
   return (
     <section className="partners fade-in-on-scroll" ref={partnerRef}>
       <div className="container">
-        <h1 className="heading">{t("partners")}</h1>
+        <Title level={2} className="partners-title">
+          {t("partners")}
+        </Title>
+
         <div className="partner-slide-wrapper">
           <div className="partner-slide-track">
-            {logos.map((logo, index) => (
+            {repeatedLogos.map((logo, index) => (
               <img key={index} src={logo} alt={`logo-${index + 1}`} />
             ))}
           </div>

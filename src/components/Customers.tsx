@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { Row, Col } from "antd";
+import { Row, Col, Typography } from "antd";
+import { useTranslation } from "react-i18next";
 import "../styles/Khách hàng.css";
 import "../styles/style.css";
-import { useTranslation } from "react-i18next";
 
 // Import logos
 import logo1 from "../assets/Khách hàng logo/Logo Bộ Công An.png";
@@ -21,10 +21,7 @@ import logo13 from "../assets/Khách hàng logo/logo-bo-nong-nghiep-inkythuatso-
 import logo14 from "../assets/Khách hàng logo/Logo Bộ Tài Nguyên và Môi Trường Stamp.png";
 import logo15 from "../assets/Khách hàng logo/Logo ACV.png";
 
-interface Logo {
-  src: string;
-  alt: string;
-}
+const { Title, Paragraph } = Typography;
 
 const Customers: React.FC = () => {
   const logosRef = useRef<(HTMLImageElement | null)[]>([]);
@@ -53,7 +50,7 @@ const Customers: React.FC = () => {
     };
   }, []);
 
-  const customerLogos: Logo[] = [
+  const customerLogos = [
     { src: logo1, alt: "Logo 1" },
     { src: logo2, alt: "Logo 2" },
     { src: logo3, alt: "Logo 3" },
@@ -75,10 +72,18 @@ const Customers: React.FC = () => {
     <section className="customers fade-in-on-scroll">
       <div className="container customers-container">
         <div className="customers-text">
-          <h1>{i18n.t("customers") as string}</h1>
-          <p>{i18n.t("customers-script1") as string}</p>
-          <p>{i18n.t("customers-script2") as string}</p>
-          <p>{i18n.t("customers-script3") as string}</p>
+          <Title level={2} className="customers-title">
+            {i18n.t("customers") as string}
+          </Title>
+          <Paragraph className="customers-content">
+            {i18n.t("customers-script1") as string}
+          </Paragraph>
+          <Paragraph className="customers-content">
+            {i18n.t("customers-script2") as string}
+          </Paragraph>
+          <Paragraph className="customers-content">
+            {i18n.t("customers-script3") as string}
+          </Paragraph>
         </div>
 
         <Row gutter={[24, 24]} justify="center" className="customers-logos">

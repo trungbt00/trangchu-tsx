@@ -6,12 +6,13 @@
   background-size: cover;
 }
 
-.banner-img {
-  margin-top: 50px;
-  width: 100%;
+.container-banner-page {
+  position: relative;
+  width: 100vw;
   height: auto;
-  display: block;
-  object-fit: cover;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .center {
@@ -20,13 +21,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  color: rgb(171, 45, 46);
+  color: rgb(171, 45, 46) !important;
   display: inline;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 40px;
+  font-size: 40px !important ;
   font-weight: 700;
+  font-weight: bold !important;
   height: auto;
   line-height: 60px;
   text-align: center;
@@ -35,15 +37,11 @@
   text-size-adjust: 100%;
   width: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin-top: 20px !important;
 }
 
 @media (max-width: 768px) {
-  img.banner-img {
-    height: 200px;
-    width: 100%;
-  }
-
-  h2.center {
-    font-size: 38px;
+  .center {
+    font-size: 34px !important;
   }
 }

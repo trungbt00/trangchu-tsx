@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Row, Col, Card, Pagination } from "antd";
+import { Row, Col, Card, Pagination, Typography } from "antd";
 import "../../styles/style.css";
 import "../../styles/Tin tức/news_info.css";
 
+const { Title, Paragraph } = Typography;
 interface NewsItem {
   id: string;
   slug: string;
@@ -51,32 +52,25 @@ const ListNewsInternal: React.FC = () => {
             />
           </Col>
           <Col xs={24} md={12} style={{ textAlign: "left" }}>
-            <div className="first-news-content">
-              <Link
-                to={`/tin-tuc/cong-nghe/${firstNews.slug}`}
-                style={{ textDecoration: "none" }}
-              >
-                <h3 className="first-news-title">{firstNews.name}</h3>
-                <p className="first-news-content">
-                  {firstNews.shortDescription}
-                </p>
-                <span className="first-news-link">XEM CHI TIẾT →</span>
-              </Link>
-            </div>
+            <Link
+              to={`/tin-tuc/cong-nghe/${firstNews.slug}`}
+              style={{ textDecoration: "none" }}
+            >
+              <Title level={3} className="first-news-title">
+                {firstNews.name}
+              </Title>
+              <Paragraph className="first-news-content">
+                {firstNews.shortDescription}
+              </Paragraph>
+              <span className="first-news-link">XEM CHI TIẾT →</span>
+            </Link>
           </Col>
         </Row>
       )}
 
       <Row gutter={[24, 24]}>
         {paginated.slice(1).map((news) => (
-          <Col
-            xs={24}
-            sm={12}
-            md={12}
-            lg={8}
-            key={news.id}
-            style={{ textAlign: "left" }}
-          >
+          <Col xs={24} sm={12} md={12} lg={8} key={news.id}>
             <Card
               hoverable
               cover={
@@ -90,9 +84,13 @@ const ListNewsInternal: React.FC = () => {
               bodyStyle={{ padding: 0 }}
             >
               <Link to={`/tin-tuc/cong-nghe/${news.slug}`}>
-                <div className="news-title">{news.name}</div>
-                <p className="news-excerpt">{news.shortDescription}</p>
-                <span className="news-link">XEM CHI TIẾT →</span>
+                <Title level={5} className="news-title">
+                  {news.name}
+                </Title>
+                <Paragraph className="news-excerpt">
+                  {news.shortDescription}
+                </Paragraph>
+                <span className="first-news-link">XEM CHI TIẾT →</span>
               </Link>
             </Card>
           </Col>

@@ -5,14 +5,15 @@
   text-align: center;
   color: white;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
-.blue-box .text-h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 40px;
+.text-h2-section1 {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 40px !important;
+  text-align: center;
 }
 
 .intro-item-wrapper {
@@ -25,8 +26,8 @@
 .intro-item {
   background-color: #ffffff;
   padding: 20px 20px;
-  margin: 0;
-  border-radius: 20px;
+  margin: 40px 0px;
+  border-radius: 10px;
   width: 160px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
@@ -46,6 +47,9 @@
   width: auto;
   object-fit: contain;
   margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title {
@@ -58,22 +62,42 @@
 }
 
 @media (max-width: 768px) {
+  .intro-item {
+    width: 100%;
+    max-width: 220px;
+    padding: 16px 12px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
   .image {
-    height: 90px;
+    height: 80px;
     width: auto;
     object-fit: contain;
-    margin-bottom: 16px;
-  }
-
-  .intro-item {
-    padding: 10px;
-  }
-
-  .blue-box .text-h2 {
-    font-size: 24px;
+    margin-bottom: 12px;
+    display: block;
   }
 
   .title {
-    font-size: 12px !important;
+    font-size: 14px !important;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.4;
+    margin-top: 0;
+  }
+
+  .text-h2-section1 {
+    font-size: 28px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .blue-box {
+    margin: 20px;
+    padding: 24px 12px;
   }
 }

@@ -1,11 +1,12 @@
+import { useTranslation } from "react-i18next";
+import { Form, Input, Button, Row, Col, Typography } from "antd";
 import "../../styles/style.css";
 import "../../styles/Liên hệ/Contact.css";
-import { useTranslation } from "react-i18next";
-import { Form, Input, Button, Row, Col } from "antd";
+
+const { Title } = Typography;
 
 const Contact: React.FC = () => {
-  const { i18n } = useTranslation();
-
+  const { t } = useTranslation();
   const [form] = Form.useForm();
 
   const onFinish = (values: any) => {
@@ -14,87 +15,81 @@ const Contact: React.FC = () => {
 
   return (
     <section className="contact-container">
-      <div className="container">
-        <h2 className="lien-he">{i18n.t("contact") as string}:</h2>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px" }}>
+        <Title level={2} className="lien-he">
+          {t("contact")}:
+        </Title>
+
         <Row justify="center">
-          <Col xs={24} sm={20} md={16} lg={10} xl={8}>
+          <Col xs={24} sm={20} md={16} lg={12} xl={10}>
             <Form
               form={form}
               layout="vertical"
               onFinish={onFinish}
               className="contact-form"
+              style={{ textAlign: "left" }}
             >
               <Row gutter={16}>
                 <Col xs={24} sm={12}>
                   <Form.Item
-                    label={i18n.t("name") as string}
+                    label={t("name")}
                     name="name"
                     rules={[
                       {
                         required: true,
-                        message: i18n.t("enter-your-name") as string,
+                        message: t("enter-your-name") as string,
                       },
                     ]}
                   >
-                    <Input placeholder={i18n.t("enter-your-name") as string} />
+                    <Input placeholder={t("enter-your-name") as string} />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={12}>
                   <Form.Item
-                    label={i18n.t("phone") as string}
+                    label={t("phone")}
                     name="phone"
                     rules={[
                       {
                         required: true,
-                        message: i18n.t("enter-your-phone") as string,
+                        message: t("enter-your-phone") as string,
                       },
                     ]}
                   >
-                    <Input placeholder={i18n.t("enter-your-phone") as string} />
+                    <Input placeholder={t("enter-your-phone") as string} />
                   </Form.Item>
                 </Col>
               </Row>
+
               <Form.Item
                 label="Email"
                 name="email"
                 rules={[
-                  {
-                    required: true,
-                    message: i18n.t("enter-your-email") as string,
-                  },
+                  { required: true, message: t("enter-your-email") as string },
                   { type: "email", message: "Email không hợp lệ" },
                 ]}
               >
-                <Input placeholder={i18n.t("enter-your-email") as string} />
+                <Input placeholder={t("enter-your-email") as string} />
               </Form.Item>
+
               <Form.Item
-                label={i18n.t("message") as string}
+                label={t("message")}
                 name="message"
                 rules={[
                   {
                     required: true,
-                    message: i18n.t("enter-your-message") as string,
+                    message: t("enter-your-message") as string,
                   },
                 ]}
               >
                 <Input.TextArea
                   rows={4}
-                  placeholder={i18n.t("enter-your-message") as string}
+                  placeholder={t("enter-your-message") as string}
                 />
               </Form.Item>
+
               <Form.Item>
-                <Button
-                  htmlType="submit"
-                  style={{
-                    textTransform: "uppercase",
-                    backgroundColor: "rgb(171, 45, 46)",
-                    color: "white",
-                    fontWeight: "bold",
-                    border: "none",
-                    padding: "6px 32px",
-                  }}
-                >
-                  {i18n.t("send") as string}
+                <Button htmlType="submit" type="primary" className="submit-btn">
+                  {t("send")}
                 </Button>
               </Form.Item>
             </Form>

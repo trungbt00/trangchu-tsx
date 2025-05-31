@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Row, Col, Card, Typography, Divider, Spin } from "antd";
+import { Row, Col, Card, Typography, Image, Spin } from "antd";
 import sp from "../../assets/Sản phẩm/Máy chủ/sp-mod.png";
 import "../../styles/style.css";
 import "../../styles/Sản phẩm máy chủ/product_info.css";
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 interface Product {
   slug: string;
@@ -43,10 +43,11 @@ export default function ProductDetail() {
             bordered
             style={{
               textAlign: "center",
-              borderColor: "#c92135",
               borderRadius: 16,
+              borderColor: "#c92135",
+              border: "2px solid #c92135",
             }}
-            bodyStyle={{ padding: 16 }}
+            bodyStyle={{ padding: 0 }}
           >
             <img
               className="sp-mod1"
@@ -54,7 +55,7 @@ export default function ProductDetail() {
               alt="sp-mod"
               style={{ height: 26, marginBottom: 12 }}
             />
-            <img
+            <Image
               src={product.thumbnailImage || ""}
               alt={product.name}
               style={{
@@ -79,7 +80,7 @@ export default function ProductDetail() {
         <Col span={24}>
           <Card
             title={<Title level={5}>{t("product-info")}</Title>}
-            style={{ borderColor: "#c92135", borderRadius: 12 }}
+            style={{ border: "2px solid #c92135", borderRadius: 12 }}
           >
             <div
               dangerouslySetInnerHTML={{
@@ -92,7 +93,7 @@ export default function ProductDetail() {
         <Col span={24}>
           <Card
             title={<Title level={5}>{t("product-features")}</Title>}
-            style={{ borderColor: "#0b5eb3", borderRadius: 12 }}
+            style={{ border: "2px solid #0b5eb3", borderRadius: 12 }}
           >
             <div
               dangerouslySetInnerHTML={{

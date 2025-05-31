@@ -5,32 +5,29 @@
   text-align: center;
 }
 
-.fields h1 {
+.fields-heading {
   font-family: "Poppins", sans-serif;
-  font-size: 46px;
-  font-weight: 700;
-  margin-bottom: 60px;
+  font-size: 46px !important;
+  font-weight: 700 !important;
+  color: white !important;
+  margin-bottom: 60px !important;
+  text-align: center !important;
 }
 
-.field-grid {
+.field-col {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px 40px;
 }
 
 .field-item {
-  max-width: 360px;
-  flex: 1 1 320px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  padding: 10px;
+  border: 0;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease;
+  overflow: hidden;
 }
 
 .field-item:hover {
@@ -38,45 +35,37 @@
   background-color: rgba(255, 255, 255, 0.08);
 }
 
-.field-item img {
+.field-item-img {
+  border-radius: 10px;
   width: 100%;
   height: 220px;
-  border-radius: 12px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  display: block;
 }
 
-.field-item:hover img {
-  transform: scale(1.02);
-  filter: brightness(0.95) contrast(1.05);
-}
-
-.field-caption {
+.field-caption-row {
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  background: transparent;
 }
 
-.field-caption img {
+.field-icon {
   width: 70px;
   height: 70px;
   object-fit: contain;
 }
 
-.field-caption p {
+.field-text {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 18px;
-  margin: 0;
+  font-size: 16px;
   color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   line-height: 1.4;
-  text-align: center;
-}
-
-.field-caption p:hover {
-  color: #c92135;
-  cursor: default;
+  white-space: normal;
 }
 
 @media (max-width: 768px) {
@@ -84,25 +73,25 @@
     padding: 60px 16px;
   }
 
-  .fields h1 {
-    font-size: 28px;
+  .fields-heading {
+    font-size: 24px !important;
+    margin-bottom: 30px !important;
   }
 
-  .field-caption {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+  .field-item-img {
+    height: 180px !important;
   }
 
-  .field-caption img {
+  .field-caption-row {
+    gap: 8px;
+  }
+
+  .field-icon {
     width: 36px;
     height: 36px;
   }
 
-  .field-caption p {
-    font-size: 16px;
-    text-align: center;
-    margin: 0;
+  .field-text {
+    font-size: 14px;
   }
 }

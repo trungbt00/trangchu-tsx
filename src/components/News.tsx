@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Row, Col, Card } from "antd";
+import { Row, Col, Card, Typography } from "antd";
 import "../styles/Tin tức.css";
 import "../styles/style.css";
 
@@ -13,7 +13,9 @@ interface NewsItem {
   image?: string;
 }
 
-export default function News() {
+const { Title, Paragraph } = Typography;
+
+const News: React.FC = () => {
   const [newsList, setNewsList] = useState<NewsItem[]>([]);
   const { i18n } = useTranslation();
 
@@ -29,7 +31,10 @@ export default function News() {
   return (
     <section className="news">
       <div className="container">
-        <h1 className="heading">{i18n.t("NEWS") as string}</h1>
+        <Title level={2} className="heading">
+          {i18n.t("NEWS") as string}
+        </Title>
+
         <Row gutter={[24, 24]} className="news-row">
           {newsList.slice(0, 3).map((news) => (
             <Col key={news.slug} xs={24} sm={12} md={8}>
@@ -47,12 +52,18 @@ export default function News() {
                       className="news-item-img"
                     />
                   }
+                  style={{ padding: 10 }}
                 >
-                  <div className="card-content-wrapper" style={{ padding: 0 }}>
-                    <h3 className="news-card-title">{news.name}</h3>
-                    <p className="news-card-description">
+                  <div
+                    className="card-content-wrapper"
+                    style={{ textAlign: "left" }}
+                  >
+                    <Title level={4} className="news-card-title">
+                      {news.name}
+                    </Title>
+                    <Paragraph className="news-card-description">
                       {news.shortDescription}
-                    </p>
+                    </Paragraph>
                   </div>
                 </Card>
               </Link>
@@ -62,4 +73,6 @@ export default function News() {
       </div>
     </section>
   );
-}
+};
+
+export default News;

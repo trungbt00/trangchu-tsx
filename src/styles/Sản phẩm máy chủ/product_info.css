@@ -1,75 +1,99 @@
 .product-card {
-  background-color: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  height: 440px;
   border: 2px solid #c92135;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 16px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  height: 400px;
-  width: 100%;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  overflow: hidden;
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
+  border: 2px solid #c92135;
 }
 
-.section-item-img {
-  min-height: 220px;
-  width: 100%;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-.pt-3.fw-bold {
-  font-size: 16px;
-  color: rgb(45, 143, 204);
-  text-align: center;
-  min-height: 48px;
+.product-card-content {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-logo {
+  height: 40px;
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
-  padding: 0 8px;
-  line-height: 1.4;
-  word-break: break-word;
-  text-wrap: balance;
+  padding-top: 8px;
 }
 
 .sp-mod {
-  height: 26px;
-  width: auto;
-  margin-top: -16px;
+  margin-top: -32px;
+  height: 28px;
   object-fit: contain;
-  border-radius: 0;
 }
 
-.sp-mod1 {
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 32px;
+.card-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+}
+
+.section-item-img {
+  height: 300px;
+  max-height: 100%;
+  max-width: 100%;
   object-fit: contain;
-  z-index: 10;
+}
+
+.card-title {
+  height: 48px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.fw-bold {
+  font-size: 16px;
+  color: rgb(45, 143, 204);
+  font-weight: 600;
+  line-height: 1.4;
+  word-break: break-word;
+  text-wrap: balance;
   padding: 0 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 }
 
 @media (max-width: 768px) {
+  section.container {
+    padding: 20px;
+  }
   .product-card {
-    padding: 12px;
+    height: auto;
   }
 
-  .section-item-img {
-    height: 180px;
+  .product-card-content {
+    padding: 12px 8px;
+  }
+
+  .product-logo,
+  .product-image,
+  .product-title {
+    flex: unset;
+    padding: 8px 0;
+  }
+
+  .product-title .fw-bold {
+    font-size: 14px;
   }
 
   .sp-mod {
-    margin-top: -12px;
+    height: 24px;
   }
 }

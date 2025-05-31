@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Row, Col } from "antd";
+import { Row, Col, Card, Typography, Image } from "antd";
 import "../../styles/style.css";
 import sp from "../../assets/Sản phẩm/Máy chủ/sp-mod.png";
 import "../../styles/Sản phẩm máy chủ/product_info.css";
+
+const { Text } = Typography;
 
 interface Product {
   slug: string;
@@ -23,7 +25,7 @@ export default function ListSever() {
 
   return (
     <section className="container">
-      <Row gutter={[24, 24]} justify="center" align="stretch">
+      <Row gutter={[24, 48]} justify="center">
         {products.map((product) => (
           <Col
             key={product.slug}
@@ -35,19 +37,23 @@ export default function ListSever() {
           >
             <Link
               to={`/san-pham/${product.slug}`}
-              style={{
-                textDecoration: "none",
-              }}
+              style={{ textDecoration: "none" }}
             >
-              <div className="product-card">
-                <img className="sp-mod" src={sp} alt="sp-mod" loading="lazy" />
-                <img
-                  className="section-item-img"
-                  src={product.thumbnailImage || ""}
-                  alt={product.name}
-                />
-                <div className="pt-3 fw-bold">{product.name}</div>
-              </div>
+              <Card hoverable bordered={false} className="product-card">
+                <div className="card-logo">
+                  <img src={sp} alt="GTSC" className="sp-mod" />
+                </div>
+                <div className="card-image">
+                  <img
+                    src={product.thumbnailImage || ""}
+                    alt={product.name}
+                    className="section-item-img"
+                  />
+                </div>
+                <div className="card-title">
+                  <Text className="fw-bold">{product.name}</Text>
+                </div>
+              </Card>
             </Link>
           </Col>
         ))}

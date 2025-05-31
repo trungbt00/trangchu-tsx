@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import { Row, Col } from "antd";
-import "../styles/Phủ sóng toàn quốc.css";
-import video from "../assets/images/0412.mp4";
+import { Row, Col, Typography } from "antd";
 import { useTranslation } from "react-i18next";
+import "../styles/Phủ sóng toàn quốc.css";
 import "../styles/style.css";
+import video from "../assets/images/0412.mp4";
+
+const { Title, Paragraph } = Typography;
 
 const Nationwide: React.FC = () => {
   const textRef = useRef<HTMLDivElement | null>(null);
@@ -32,17 +34,21 @@ const Nationwide: React.FC = () => {
   }, []);
 
   return (
-    <section className="nationwide">
+    <section className="nationwide fade-in-on-scroll">
       <div className="container">
         <Row gutter={[40, 40]} align="middle">
           <Col xs={24} md={12}>
-            <div className="text" ref={textRef}>
-              <h1 className="heading">{i18n.t("national") as string}</h1>
-              <p>{i18n.t("nationwide") as string}</p>
+            <div ref={textRef} className="text">
+              <Title level={2} className="nationwide-heading">
+                {i18n.t("national") as string}
+              </Title>
+              <Paragraph className="nationwide-content">
+                {i18n.t("nationwide") as string}
+              </Paragraph>
             </div>
           </Col>
           <Col xs={24} md={12}>
-            <div className="image" ref={videoRef}>
+            <div ref={videoRef} className="image">
               <video
                 className="nationwide-video"
                 autoPlay

@@ -1,9 +1,11 @@
-import { Row, Col } from "antd";
-import "../../styles/style.css";
+import { Row, Col, Card, Typography, Image } from "antd";
+import { useTranslation } from "react-i18next";
 import img1 from "../../assets/Giới thiệu/tn.png";
 import img2 from "../../assets/Giới thiệu/sm.png";
+import "../../styles/style.css";
 import "../../styles/Giới thiệu/section2.css";
-import { useTranslation } from "react-i18next";
+
+const { Title, Paragraph } = Typography;
 
 const Section2: React.FC = () => {
   const { t } = useTranslation();
@@ -25,16 +27,34 @@ const Section2: React.FC = () => {
 
   return (
     <section className="container">
-      <Row gutter={[24, 24]} justify="center" className="section1-grid">
+      <Row gutter={[24, 24]} justify="center">
         {sections.map((item, index) => (
           <Col key={index} xs={24} sm={24} md={12}>
-            <div className="section-item2">
+            <Card
+              bordered={false}
+              bodyStyle={{
+                padding: 0,
+                textAlign: "center",
+                display: "flex",
+                flexDirection: "column",
+                gap: 16,
+              }}
+              className="section-item2"
+            >
               <div className="red-box">
-                <h2 className="text-h2">{item.title}</h2>
+                <Title level={3} className="text-h2-section2">
+                  {item.title}
+                </Title>
               </div>
-              <img src={item.img} alt={item.alt} loading="lazy" />
-              <div className="text-p">{item.content}</div>
-            </div>
+              <Image
+                src={item.img}
+                alt={item.alt}
+                preview={false}
+                style={{ width: "auto" }}
+                className="section-item2-img"
+              />
+              <Paragraph className="text-p">{item.content}</Paragraph>
+            </Card>
           </Col>
         ))}
       </Row>

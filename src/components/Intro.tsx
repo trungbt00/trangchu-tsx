@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../styles/intro.css";
+import { Typography, Row, Col } from "antd";
 import { useTranslation } from "react-i18next";
+import "../styles/intro.css";
 import "../styles/style.css";
+
+const { Title, Paragraph } = Typography;
 
 const Intro: React.FC = () => {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -17,9 +20,7 @@ const Intro: React.FC = () => {
           }
         });
       },
-      {
-        threshold: 0.3,
-      }
+      { threshold: 0.3 }
     );
 
     if (introRef.current) {
@@ -34,10 +35,15 @@ const Intro: React.FC = () => {
   }, []);
 
   return (
-    <section ref={introRef} className={`intro ${isVisible ? "visible" : ""}`}>
-      <div className="intro-container">
-        <h1>{i18n.t("company-name") as string}</h1>
-        <p>{i18n.t("intro") as string}</p>
+    <section className="container">
+      <div ref={introRef} className={`intro ${isVisible ? "visible" : ""}`}>
+        <Title level={1} className="intro-title" style={{ margin: 0 }}>
+          {" "}
+          {i18n.t("company-name") as string}
+        </Title>
+        <Paragraph className="intro-content">
+          {i18n.t("intro") as string}
+        </Paragraph>
       </div>
     </section>
   );

@@ -1,31 +1,39 @@
-import "../../styles/Tin tức/news_info.css";
+import { Typography, Row, Col } from "antd";
 import { useTranslation } from "react-i18next";
 import { NewsItem } from "../../types/news";
+import "../../styles/Tin tức/news_info.css";
+
+const { Title, Text, Link: AntLink } = Typography;
 
 interface RelatedNewsProps {
   newsList: NewsItem[];
 }
 
 const RelatedNews: React.FC<RelatedNewsProps> = ({ newsList }) => {
-  const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="related-news-wrapper">
-      <h3 className="related-news">{i18n.t("other_news") as string}</h3>
+      <Title level={2} className="related-news">
+        {t("other_news")}
+      </Title>
+
       {newsList.map((item) => (
-        <div className="related-news-item" key={item.slug}>
-          <div className="icon">➤</div>
-          <div className="content">
+        <Row className="related-news-item" key={item.slug}>
+          <Col xs={1} sm={1} md={1} lg={1} className="icon">
+            ➤
+          </Col>
+          <Col xs={22} sm={22} md={22} lg={22} flex="auto" className="content">
             <a
-              className="related-news-title"
               href={`/tin-tuc/cong-nghe/${item.slug}`}
-              style={{ textDecoration: "none" }}
+              className="related-news-title"
+              style={{ textAlign: "left" }}
             >
               {item.name}
             </a>
-            <div className="related-news-date">{item.date}</div>
-          </div>
-        </div>
+            {/* <div className="related-news-date">{item.date}</div> */}
+          </Col>
+        </Row>
       ))}
     </div>
   );

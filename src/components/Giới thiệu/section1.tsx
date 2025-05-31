@@ -1,11 +1,13 @@
-import { Row, Col } from "antd";
-import "../../styles/style.css";
+import { Row, Col, Typography, Card } from "antd";
+import { useTranslation } from "react-i18next";
 import img1 from "../../assets/Giới thiệu/t1.png";
 import img2 from "../../assets/Giới thiệu/t2.png";
 import img3 from "../../assets/Giới thiệu/t3.png";
 import img4 from "../../assets/Giới thiệu/t4.png";
+import "../../styles/style.css";
 import "../../styles/Giới thiệu/section1.css";
-import { useTranslation } from "react-i18next";
+
+const { Title, Text } = Typography;
 
 const Section1: React.FC = () => {
   const { t } = useTranslation();
@@ -18,30 +20,41 @@ const Section1: React.FC = () => {
   ];
 
   return (
-    <section className="container">
-      <div className="blue-box">
-        <h2 className="text-h2">{t("why-choose-us")}</h2>
-        <Row gutter={[16, 24]} justify="center">
+    <section className="blue-box">
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <Title level={2} className="text-h2-section1">
+          {t("why-choose-us")}
+        </Title>
+
+        <Row gutter={[24, 24]} justify="center">
           {reasons.map((reason, index) => (
             <Col
-              xs={12}
-              sm={12}
-              md={6}
-              lg={5}
-              xl={4}
-              xxl={4}
               key={index}
-              className="intro-item-wrapper"
+              xs={24}
+              sm={12}
+              md={5}
+              lg={4}
+              xl={4}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+              }}
             >
-              <div className="intro-item">
+              <Card
+                bordered={false}
+                hoverable
+                className="intro-item"
+                bodyStyle={{ padding: 0 }}
+                style={{ width: "150px" }}
+              >
                 <img
                   src={reason.img}
                   alt={reason.alt}
-                  loading="lazy"
                   className="image"
+                  loading="lazy"
                 />
-                <p className="title">{reason.label}</p>
-              </div>
+                <Text className="title">{reason.label}</Text>
+              </Card>
             </Col>
           ))}
         </Row>

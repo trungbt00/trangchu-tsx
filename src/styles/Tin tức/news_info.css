@@ -141,18 +141,26 @@ h1.news-title {
 }
 
 .news-content-detail figure,
-.news-content-detail figure.image,
-.news-content-detail figure.table table tbody tr td img,
-.news-content-detail img {
-  width: 100% !important;
-  height: auto !important;
+.news-content-detail figure.table,
+.news-content-detail figure.table table {
+  display: table !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.news-content-detail figure.table table td {
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 0 !important; 
+}
+
+.news-content-detail figure.table table td img,
+.news-content-detail p img {
   display: block !important;
   margin: 16px auto !important;
+  max-width: 100% !important;
+  height: auto !important;
   object-fit: contain !important;
-  aspect-ratio: auto !important;
-  justify-content: center !important;
-  align-items: center !important;
-  justify-self: center !important;
 }
 
 .news-content-detail {

@@ -33,6 +33,7 @@ export default function ListSever() {
             sm={12}
             md={12}
             lg={8}
+            xl={7}         
             style={{ display: "flex", justifyContent: "center" }}
           >
             <Link

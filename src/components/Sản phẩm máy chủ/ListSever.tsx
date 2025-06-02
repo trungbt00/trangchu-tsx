@@ -25,7 +25,7 @@ export default function ListSever() {
 
   return (
     <section className="container">
-      <Row gutter={[24, 48]} justify="center">
+      <Row gutter={[24, 24]} justify="center">
         {products.map((product) => (
           <Col
             key={product.slug}

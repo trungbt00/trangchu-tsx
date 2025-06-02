@@ -33,12 +33,16 @@ export default function ListSever() {
             sm={12}
             md={12}
             lg={8}
-            xl={7}         
+            xl={7}
             style={{ display: "flex", justifyContent: "center" }}
           >
             <Link
               to={`/san-pham/${product.slug}`}
-              style={{ textDecoration: "none" }}
+              style={{
+                textDecoration: "none",
+                display: "flex",
+                flex: "1 1 auto",
+              }}
             >
               <Card hoverable bordered={false} className="product-card">
                 <div className="card-logo">

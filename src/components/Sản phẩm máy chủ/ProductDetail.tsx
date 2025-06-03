@@ -42,19 +42,26 @@ export default function ProductDetail() {
             hoverable
             bordered
             style={{
-              textAlign: "center",
               borderRadius: 16,
               borderColor: "#c92135",
               border: "2px solid #c92135",
+              overflow: "hidden",
             }}
-            bodyStyle={{ padding: 0 }}
+            bodyStyle={{
+              padding: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
           >
-            <img
-              className="sp-mod1"
-              src={sp}
-              alt="sp-mod"
-              style={{ height: 26, marginBottom: 12 }}
-            />
+            <div style={{ marginTop: 16, marginBottom: 8 }}>
+              <img
+                className="sp-mod1"
+                src={sp}
+                alt="sp-mod"
+                style={{ height: 26 }}
+              />
+            </div>
             <Image
               src={product.thumbnailImage || ""}
               alt={product.name}
@@ -63,12 +70,16 @@ export default function ProductDetail() {
                 height: 220,
                 objectFit: "contain",
                 marginBottom: 16,
-                marginTop: 16,
               }}
             />
             <Title
               level={5}
-              style={{ color: "#2d8fcc", minHeight: 48, margin: 0 }}
+              style={{
+                color: "#2d8fcc",
+                minHeight: 48,
+                margin: 0,
+                textAlign: "center",
+              }}
             >
               {product.name}
             </Title>

@@ -36,6 +36,12 @@
   object-fit: contain;
 }
 
+.sp-mod1 {
+  margin-top: -32px;
+  height: 28px;
+  object-fit: contain;
+}
+
 .card-image {
   flex: 1;
   display: flex;
